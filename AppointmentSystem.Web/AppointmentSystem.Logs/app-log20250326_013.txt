@@ -1,0 +1,140 @@
+2025-03-26 11:55:46.475 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-26 11:55:47.752 +05:30 [INF] Executed DbCommand (81ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 11:55:47.826 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 11:55:47.842 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 11:55:47.862 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-26 11:55:47.906 +05:30 [INF] Admin user 'mehak@lng.com' already exists.
+2025-03-26 11:55:48.206 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-26 11:55:48.210 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-26 11:55:48.263 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-26 11:55:48.267 +05:30 [INF] Hosting environment: Development
+2025-03-26 11:55:48.268 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-26 11:55:48.677 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 11:55:48.831 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:55:48.846 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 11:55:48.858 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 11:55:48.972 +05:30 [INF] Executed ViewResult - view Login executed in 113.0526ms.
+2025-03-26 11:55:48.983 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 133.3863ms
+2025-03-26 11:55:48.987 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 11:55:48.987 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 11:55:48.989 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:55:49.004 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 16.7699ms
+2025-03-26 11:55:49.005 +05:30 [INF] HTTP GET / responded 200 in 198.5391 ms
+2025-03-26 11:55:49.030 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 360.1431ms
+2025-03-26 11:55:49.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 65.7674ms
+2025-03-26 11:56:57.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 11:56:57.439 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:56:57.445 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 11:56:57.454 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 11:56:57.481 +05:30 [INF] Executed ViewResult - view Login executed in 27.2993ms.
+2025-03-26 11:56:57.486 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 35.8101ms
+2025-03-26 11:56:57.491 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:56:57.494 +05:30 [INF] HTTP GET / responded 200 in 56.0185 ms
+2025-03-26 11:56:57.501 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 85.299ms
+2025-03-26 11:56:57.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 11:56:57.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 11:56:57.524 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 21.9045ms
+2025-03-26 11:56:57.555 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.1573ms
+2025-03-26 11:57:54.829 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 11:57:54.844 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:57:54.848 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 11:57:54.864 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 11:57:54.894 +05:30 [INF] Executed ViewResult - view Login executed in 30.9564ms.
+2025-03-26 11:57:54.900 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 48.0754ms
+2025-03-26 11:57:54.904 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:57:54.908 +05:30 [INF] HTTP GET / responded 200 in 64.2840 ms
+2025-03-26 11:57:54.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 11:57:54.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 11:57:54.917 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 87.9386ms
+2025-03-26 11:57:54.954 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 34.9402ms
+2025-03-26 11:57:54.971 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 55.8196ms
+2025-03-26 11:58:49.860 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 11:58:49.867 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:58:49.870 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 11:58:49.875 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 11:58:49.913 +05:30 [INF] Executed ViewResult - view Login executed in 38.707ms.
+2025-03-26 11:58:49.924 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 50.2624ms
+2025-03-26 11:58:49.929 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 11:58:49.932 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/css/site.css?v=q_ga9bWu18b_5bOfrKRY152Kppv04uuVQaGySV09e_o - null null
+2025-03-26 11:58:49.934 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 11:58:49.933 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 11:58:49.932 +05:30 [INF] HTTP GET / responded 200 in 64.9844 ms
+2025-03-26 11:58:49.992 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 59.3183ms
+2025-03-26 11:58:49.994 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 134.3557ms
+2025-03-26 11:58:50.001 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 67.9184ms
+2025-03-26 11:58:50.011 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\AppointmentSystem\AppointmentSystem.Web\wwwroot\css\site.css'
+2025-03-26 11:58:50.021 +05:30 [INF] HTTP GET /css/site.css responded 200 in 43.1995 ms
+2025-03-26 11:58:50.024 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/css/site.css?v=q_ga9bWu18b_5bOfrKRY152Kppv04uuVQaGySV09e_o - 200 414 text/css 92.46ms
+2025-03-26 12:22:51.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 12:22:51.405 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 12:22:51.414 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 12:22:51.426 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 12:22:51.495 +05:30 [INF] Executed ViewResult - view Login executed in 71.311ms.
+2025-03-26 12:22:51.503 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 80.5544ms
+2025-03-26 12:22:51.510 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 12:22:51.516 +05:30 [INF] HTTP GET / responded 200 in 111.8472 ms
+2025-03-26 12:22:51.526 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 147.4386ms
+2025-03-26 12:22:51.546 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/css/site.css?v=NQoq7JXBnqf7r00wj0-BDuhfmNemlVzbOcP-jukHguM - null null
+2025-03-26 12:22:51.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 12:22:51.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/assets/login-pic.webp - null null
+2025-03-26 12:22:51.588 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 41.8117ms
+2025-03-26 12:22:51.597 +05:30 [INF] The file /assets/login-pic.webp was not modified
+2025-03-26 12:22:51.599 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 12:22:51.601 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\AppointmentSystem\AppointmentSystem.Web\wwwroot\css\site.css'
+2025-03-26 12:22:51.622 +05:30 [INF] HTTP GET /assets/login-pic.webp responded 304 in 29.1867 ms
+2025-03-26 12:22:51.633 +05:30 [INF] HTTP GET /css/site.css responded 200 in 51.6004 ms
+2025-03-26 12:22:51.650 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 51.5183ms
+2025-03-26 12:22:51.653 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/assets/login-pic.webp - 304 null image/webp 105.9119ms
+2025-03-26 12:22:51.657 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/css/site.css?v=NQoq7JXBnqf7r00wj0-BDuhfmNemlVzbOcP-jukHguM - 200 471 text/css 111.3675ms
+2025-03-26 12:25:54.255 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-26 12:25:55.807 +05:30 [INF] Executed DbCommand (76ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 12:25:55.889 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 12:25:55.910 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 12:25:55.941 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-26 12:25:56.000 +05:30 [INF] Admin user 'mehak@lng.com' already exists.
+2025-03-26 12:25:56.387 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-26 12:25:56.391 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-26 12:25:56.445 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-26 12:25:56.450 +05:30 [INF] Hosting environment: Development
+2025-03-26 12:25:56.453 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-26 12:25:56.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 12:25:57.127 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 12:25:57.145 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 12:25:57.176 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 12:25:57.369 +05:30 [INF] Executed ViewResult - view Login executed in 191.4966ms.
+2025-03-26 12:25:57.382 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 229.597ms
+2025-03-26 12:25:57.386 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 12:25:57.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/css/site.css?v=kIvuM9OaMWLc0AwXnrZk_UfgN-cjEqkprj0nC1i0eXc - null null
+2025-03-26 12:25:57.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-26 12:25:57.394 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-26 12:25:57.396 +05:30 [INF] HTTP GET / responded 200 in 291.5665 ms
+2025-03-26 12:25:57.428 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 39.5451ms
+2025-03-26 12:25:57.431 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\AppointmentSystem\AppointmentSystem.Web\wwwroot\css\site.css'
+2025-03-26 12:25:57.441 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 476.5343ms
+2025-03-26 12:25:57.451 +05:30 [INF] HTTP GET /css/site.css responded 200 in 44.0319 ms
+2025-03-26 12:25:57.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/css/site.css?v=kIvuM9OaMWLc0AwXnrZk_UfgN-cjEqkprj0nC1i0eXc - 200 460 text/css 75.8316ms
+2025-03-26 12:25:57.485 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.8254ms

@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Appointment.Handlers\AppointmentSystem.Handlers.csproj" />
+    <ProjectReference Include="..\AppointmentSystem.Data\AppointmentSystem.Data.csproj" />
+    <ProjectReference Include="..\AppointmentSystem.Logs\AppointmentSystem.Logs.csproj" />
+    <ProjectReference Include="..\AppointmentSystem.Models\AppointmentSystem.Models.csproj" />
+    <ProjectReference Include="..\AppointmentSystem.Web\AppointmentSystem.Web.csproj" />
+  </ItemGroup>
+
+</Project>

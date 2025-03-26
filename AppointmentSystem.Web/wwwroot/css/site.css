@@ -20,3 +20,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+.login-bg-color {
+    background-color: #d6f1ef;
+}
+.login-btn-color {
+    color: #d6eaec !important;
+    background-color: #30505e !important;
+}
+
+    .login-btn-color:hover {
+        color: white !important;
+        background-color: #30505e !important;
+    }
+
+.main-color {
+    color: #30505e !important;
+    
+}

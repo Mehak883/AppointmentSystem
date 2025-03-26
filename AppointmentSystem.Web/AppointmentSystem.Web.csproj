@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.14">
       <PrivateAssets>all</PrivateAssets>
@@ -26,7 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Appointment.Handlers\AppointmentSystem.Handlers.csproj" />
     <ProjectReference Include="..\AppointmentSystem.Data\AppointmentSystem.Data.csproj" />
+    <ProjectReference Include="..\AppointmentSystem.Logs\AppointmentSystem.Logs.csproj" />
     <ProjectReference Include="..\AppointmentSystem.Models\AppointmentSystem.Models.csproj" />
   </ItemGroup>
 

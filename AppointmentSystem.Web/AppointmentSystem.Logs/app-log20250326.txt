@@ -1,0 +1,34 @@
+2025-03-26 06:38:41.383 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-26 06:38:43.237 +05:30 [INF] Executed DbCommand (138ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 06:38:43.333 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 06:38:43.345 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-26 06:38:43.382 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-26 06:38:43.489 +05:30 [INF] Admin user 'mehak@lng.com' already exists.
+2025-03-26 06:38:44.926 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-26 06:38:44.931 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-26 06:38:45.259 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-26 06:38:45.271 +05:30 [INF] Hosting environment: Development
+2025-03-26 06:38:45.300 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-26 06:38:45.909 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-26 06:38:46.296 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 06:38:46.348 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-26 06:38:46.405 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-26 06:38:46.650 +05:30 [INF] Executed ViewResult - view Login executed in 252.0216ms.
+2025-03-26 06:38:46.659 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 299.5612ms
+2025-03-26 06:38:46.667 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-26 06:38:46.695 +05:30 [INF] HTTP GET / responded 200 in 467.4068 ms
+2025-03-26 06:38:46.710 +05:30 [WRN] Unable to configure Browser Link script injection on the response. 
+2025-03-26 06:38:46.715 +05:30 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2025-03-26 06:38:46.729 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 843.6841ms
