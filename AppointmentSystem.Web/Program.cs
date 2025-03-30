@@ -6,7 +6,7 @@ using Serilog;
 using AppointmentSystem.Handlers.Login;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Reflection;
-using AppointmentSystem.Handlers.Admin;
+using AppointmentSystem.Handlers.Admin.Handlers;
 
 var builder = WebApplication.CreateBuilder(args);
 

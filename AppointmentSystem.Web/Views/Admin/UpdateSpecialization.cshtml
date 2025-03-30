@@ -1,0 +1,26 @@
+﻿@model AppointmentSystem.Dtos.Specialization.SpecializationResponseDto
+
+@{
+    ViewData["Title"] = "Update Admin";
+}
+
+<div class="container mt-4">
+    <h2 class="main-color">Update Admin</h2>
+    <form asp-controller="Admin" asp-action="UpdateSpecialization" method="post">
+        <input type="hidden" asp-for="SpecializationId" />
+
+        <div class="mb-3">
+            <label asp-for="SpecializationName" class="form-label"></label>
+            <input asp-for="SpecializationName" class="form-control" required />
+            <span asp-validation-for="SpecializationName" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn-color btn">Update</button>
+    </form>
+</div>
+@section Scripts {
+    @{
+                                <partial name="_ValidationScriptsPartial"/>
+    }
+}

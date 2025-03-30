@@ -2,7 +2,7 @@
 using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
-namespace AppointmentSystem.Handlers.Admin
+namespace AppointmentSystem.Handlers.Admin.Handlers
 {
  public class DeleteAdminHandler : IRequestHandler<DeleteAdminRequest, bool>
 

@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppointmentSystem.Handlers.Admin
+namespace AppointmentSystem.Handlers.Admin.Handlers
 {
     class GetByIdAdminHandler : IRequestHandler<GetByIdAdminRequest, AdminResponseDto>
     {
