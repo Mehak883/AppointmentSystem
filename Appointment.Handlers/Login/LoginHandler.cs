@@ -1,17 +1,12 @@
-﻿using AppointmentSystem.Handlers.Login.Command;
+﻿using AppointmentSystem.Dtos.Admin;
+using AppointmentSystem.Handlers.Login.Command;
 using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace AppointmentSystem.Handlers.Login
 {
-  public class LoginHandler : IRequestHandler<LoginRequest, bool>
+  public class LoginHandler : IRequestHandler<LoginRequest, AdminResponseDto>
     {
 
         private readonly UserManager<ApplicationUser> _userManager;
@@ -26,18 +21,18 @@ namespace AppointmentSystem.Handlers.Login
         }
 
 
-        public async Task<bool> Handle(LoginRequest request, CancellationToken cancellationToken)
+        public async Task<AdminResponseDto> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
             var user = await _userManager.FindByEmailAsync(request.Email);
             if (user == null)
             {
-                return false;
+                return null;
             }
 
             var result = await _signInManager.PasswordSignInAsync(user, request.Password, false, false);
             if (!result.Succeeded)
             {
-                return false;
+                return null;
             }
             var roles = await _userManager.GetRolesAsync(user);
             string role = roles.FirstOrDefault() ?? "Patient";
@@ -45,10 +40,12 @@ namespace AppointmentSystem.Handlers.Login
             var session = _httpContextAccessor.HttpContext.Session;
             session.SetString("UserId", user.Id);
             session.SetString("Role", role);
+            session.SetString("FullName", user.FullName);
             session.SetString("UserName", user.UserName);
             session.SetString("UserEmail", user.Email);
 
-            return true;
+        return new AdminResponseDto { UserId = user.Id, Email = user.Email, Fullname = user.FullName,Role= role };
+            
         }
     }
     

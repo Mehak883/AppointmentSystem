@@ -6,20 +6,23 @@ using Serilog;
 using AppointmentSystem.Handlers.Login;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Reflection;
+using AppointmentSystem.Handlers.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppointmentDbContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("AppointmentSystemConnectionString")
-    ));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AppointmentSystemConnectionString")));
+
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppointmentDbContext>()
     .AddDefaultTokenProviders();
 
-
 // Register IHttpContextAccessor
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+// Authentication and Cookie Configurations
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.HttpOnly = true;
@@ -36,25 +39,29 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(30);
+    options.IdleTimeout = TimeSpan.FromMinutes(60); // Make it consistent with authentication
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
 
-
+// Configure Serilog
 Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)  // Read settings from appsettings.json
-    .WriteTo.Console()  // Log to console
-    .WriteTo.File("AppointmentSystem.Logs/app-log.txt", rollingInterval: RollingInterval.Day) // Log to file
+    .ReadFrom.Configuration(builder.Configuration)
+    .WriteTo.Console()
+    .WriteTo.File("AppointmentSystem.Logs/app-log.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 builder.Host.UseSerilog();
-//builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(LoginHandler).Assembly));
 
-//builder.Services.AddMediatR(typeof(LoginHandler).Assembly);
+// Register MediatR in a single call
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
+    typeof(LoginHandler).Assembly,
+    typeof(DeleteAdminHandler).Assembly
+));
+
 var app = builder.Build();
 
+// Seed roles & users
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -64,21 +71,120 @@ using (var scope = app.Services.CreateScope())
     await DbInitializer.SeedDataAsync(userManager, roleManager, logger);
 }
 
-// Configure the HTTP request pipeline.
+// Configure middleware
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
 app.UseSerilogRequestLogging();
-app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthorization();
+app.UseAuthentication();  // Ensure authentication is checked first
+app.UseAuthorization();   // Then, apply authorization policies
+app.UseSession();         // Use session after authentication & authorization
+app.Use(async (context, next) =>
+{
+    var sessionUser = context.Session.GetString("Role");
+
+    if (!string.IsNullOrEmpty(sessionUser))
+    {
+        var currentPath = context.Request.Path.Value.ToLower();
+
+        // Allow subpages (e.g., /Admin/ManageAdmins) without redirecting
+        bool isAdminArea = currentPath.StartsWith("/admin");
+        bool isDoctorArea = currentPath.StartsWith("/doctor");
+        bool isPatientArea = currentPath.StartsWith("/patient");
+
+        if ((sessionUser == "SuperAdmin" || sessionUser == "Admin") && !isAdminArea)
+        {
+            context.Response.Redirect("/Admin/Dashboard");
+            return;
+        }
+        if (sessionUser == "Doctor" && !isDoctorArea)
+        {
+            context.Response.Redirect("/Doctor/Dashboard");
+            return;
+        }
+        if (sessionUser == "Patient" && !isPatientArea)
+        {
+            context.Response.Redirect("/Patient/Profile");
+            return;
+        }
+    }
+
+    await next();
+});
+
+
+//app.Use(async (context, next) =>
+//{
+//    var sessionUser = context.Session.GetString("Role");
+
+//    if (!string.IsNullOrEmpty(sessionUser))
+//    {
+//        var currentPath = context.Request.Path.Value.ToLower();
+
+//        // Prevent infinite loops
+//        if (!(currentPath.StartsWith("/admin/dashboard") && sessionUser == "SuperAdmin") &&
+//            !(currentPath.StartsWith("/doctor/dashboard") && sessionUser == "Doctor") &&
+//            !(currentPath.StartsWith("/patient/profile") && sessionUser == "Patient"))
+//        {
+//            switch (sessionUser)
+//            {
+//                case "SuperAdmin":
+//                case "Admin":
+//                    context.Response.Redirect("/Admin/Dashboard");
+//                    return;
+//                case "Doctor":
+//                    context.Response.Redirect("/Doctor/Dashboard");
+//                    return;
+//                case "Patient":
+//                    context.Response.Redirect("/Patient/Profile");
+//                    return;
+//            }
+//        }
+//    }
+
+
+
+//await next();
+//});
+
+// Session-based role redirection middleware
+//app.Use(async (context, next) =>
+//{
+//    //var sessionUser = "SuperAdmin";
+//    var sessionUser = context.Session.GetString("Role");
+
+//    if (string.IsNullOrEmpty(sessionUser))
+//    {
+//        context.Response.Redirect("/Account/Login");
+//        return;
+//    }
+
+//    await next(); // Ensure next middleware gets executed before redirection
+
+//    switch (sessionUser)
+//    {
+//        case "SuperAdmin":
+//            context.Response.Redirect("/Admin/Dashboard");
+//            return;
+//        case "Doctor":
+//            context.Response.Redirect("/Doctor/Dashboard");
+//            return;
+//        case "Patient":
+//            context.Response.Redirect("/Patient/Dashboard");
+//            return;
+//        default:
+//            context.Response.Redirect("/Account/Login");
+//            return;
+//    }
+//});
 
 app.MapControllerRoute(
     name: "default",

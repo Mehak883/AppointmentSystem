@@ -1,15 +1,54 @@
-﻿<section>
-  <nav>
-    <ul>
-      <li><a href="#">London</a></li>
-      <li><a href="#">Paris</a></li>
-      <li><a href="#">Tokyo</a></li>
-    </ul>
-  </nav>
+﻿@using AppointmentSystem.Dtos.Admin
+@model AdminResponseDto 
 
-  <article>
-    <h1>London</h1>
-    <p>London is the capital city of England. It is the most populous city in the  United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
-    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-  </article>
-</section>
+<nav class="navbar navbar-expand-lg  nav-bg-color">
+    <div class="container-fluid">
+        <a class="navbar-brand  text-white" href="#">Admin Dashboard</a>
+  
+
+        <button class="navbar-toggler nav-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <i class="bi bi-list"></i> <!-- Bootstrap menu icon -->
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                @if (Model.Role == "SuperAdmin")
+                {
+                        <li class="nav-item">
+                            <a class="nav-link nav-color" asp-controller="Admin" asp-action="GetAllAdmin">Manage Admins</a>
+                        </li>
+                }
+                <li class="nav-item">
+                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ManageDoctors">Manage Doctors</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ViewDoctorLeaves">Doctor Leaves</a>
+                </li>
+            </ul>
+
+            <!-- Profile Dropdown with Person Icon -->
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
+                    <div class="icon-circle">
+                        <i class="bi bi-person-fill"></i>  <!-- Bootstrap Person Icon -->
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="profileDropdown">
+                    <li class="dropdown-item text-center">
+                        <strong>@Model.Fullname</strong> 
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <small>@Model.Email</small>
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <span class="badge bg-primary">@Model.Role</span>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

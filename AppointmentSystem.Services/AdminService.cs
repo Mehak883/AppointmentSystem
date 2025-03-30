@@ -1,7 +1,7 @@
-﻿using AppointmentSystem.Handlers.Admin.Command;
+﻿using AppointmentSystem.Dtos.Admin;
+using AppointmentSystem.Handlers.Admin.Command;
 using AppointmentSystem.Models;
 using AppointmentSystem.Services.Interfaces;
-using AppointmentSystem.Web.DTOs.Admin;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;

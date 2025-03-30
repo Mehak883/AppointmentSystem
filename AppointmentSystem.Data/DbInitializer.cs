@@ -13,7 +13,7 @@ namespace AppointmentSystem.Data
             RoleManager<IdentityRole> roleManager,
             ILogger<DbInitializer> logger)
         {
-            string[] roleNames = { "Admin", "Doctor", "Patient" };
+            string[] roleNames = { "SuperAdmin","Admin", "Doctor", "Patient" };
 
             foreach (var roleName in roleNames)
             {
@@ -31,7 +31,7 @@ namespace AppointmentSystem.Data
                 }
             }
 
-            string adminEmail = "mehak@lng.com";
+            string adminEmail = "mhk@lng.com";
             string adminPassword = "Dhawan@123";
 
             if (await userManager.FindByEmailAsync(adminEmail) == null)
@@ -48,8 +48,8 @@ namespace AppointmentSystem.Data
 
                 if (result.Succeeded)
                 {
-                    await userManager.AddToRoleAsync(adminUser, "Admin");
-                    logger.LogInformation($"Admin user '{adminEmail}' created and assigned to 'Admin' role.");
+                    await userManager.AddToRoleAsync(adminUser, "SuperAdmin");
+                    logger.LogInformation($"Admin user '{adminEmail}' created and assigned to 'SuperAdmin' role.");
                 }
                 else
                 {

@@ -1,0 +1,57 @@
+﻿@using AppointmentSystem.Dtos.Admin
+@model List<AdminResponseDto>
+
+<div class="container mt-3">
+    <div class="d-flex justify-content-between align-items-center">
+        <h2 class="main-color">Admin Management</h2>
+        <a href="@Url.Action("CreateAdmin", "Admin")" class="btn btn-color">Add Admin</a>
+    </div>
+
+    <table class="table table-bordered mt-3">
+        <thead >
+            <tr class="main-bg-color text-white">
+                 <th>#</th> 
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        @{
+            int count = 1;
+        } 
+
+        <tbody>
+            @foreach (var admin in Model)
+            {
+                    <tr>
+                         <td>@count</td>
+                        <td>@admin.Fullname</td>
+                        <td>@admin.Email</td>
+                        <td>
+                            <a asp-action="UpdateAdmin" asp-controller="Admin" asp-route-id="@admin.UserId" class="btn btn-warning btn-sm">Update</a>
+                                 <button class="btn btn-danger btn-sm" onclick="confirmDelete('@admin.UserId')">Delete</button>
+                        </td>
+                    </tr>
+                    count++;
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    function confirmDelete(userId) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "This action cannot be undone!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "Cancel"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/Admin/DeleteAdmin?id=" + userId;
+            }
+        });
+    }
+</script>

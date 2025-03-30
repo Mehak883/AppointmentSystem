@@ -1,0 +1,607 @@
+2025-03-30 12:09:28.026 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-30 12:09:29.307 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:09:29.370 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:09:29.380 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:09:29.388 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:09:29.406 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-30 12:09:29.445 +05:30 [INF] Admin user 'mhk@lng.com' already exists.
+2025-03-30 12:09:29.703 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-30 12:09:29.706 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-30 12:09:29.772 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-30 12:09:29.775 +05:30 [INF] Hosting environment: Development
+2025-03-30 12:09:29.780 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-30 12:09:30.413 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-30 12:09:30.589 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.596 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.600 +05:30 [INF] HTTP GET / responded 302 in 60.1130 ms
+2025-03-30 12:09:30.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 302 0 null 208.014ms
+2025-03-30 12:09:30.613 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.628 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.631 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.633 +05:30 [INF] HTTP GET /Account/Login responded 302 in 6.3929 ms
+2025-03-30 12:09:30.636 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 23.1208ms
+2025-03-30 12:09:30.641 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.651 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.653 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.657 +05:30 [INF] HTTP GET /Account/Login responded 302 in 8.5871 ms
+2025-03-30 12:09:30.660 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.7942ms
+2025-03-30 12:09:30.664 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.674 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.676 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.677 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.5139 ms
+2025-03-30 12:09:30.680 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.5918ms
+2025-03-30 12:09:30.682 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.691 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.692 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.694 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1704 ms
+2025-03-30 12:09:30.696 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.0667ms
+2025-03-30 12:09:30.699 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.707 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.708 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.710 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1185 ms
+2025-03-30 12:09:30.712 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.1529ms
+2025-03-30 12:09:30.715 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.725 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.726 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.728 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1786 ms
+2025-03-30 12:09:30.730 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.8693ms
+2025-03-30 12:09:30.733 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.743 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.744 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.746 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1218 ms
+2025-03-30 12:09:30.748 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.4321ms
+2025-03-30 12:09:30.750 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.757 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.760 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.761 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.3970 ms
+2025-03-30 12:09:30.764 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.8215ms
+2025-03-30 12:09:30.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.775 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.776 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.778 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.0745 ms
+2025-03-30 12:09:30.780 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.8303ms
+2025-03-30 12:09:30.783 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.792 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.793 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.795 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.2705 ms
+2025-03-30 12:09:30.797 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.0639ms
+2025-03-30 12:09:30.800 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.809 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.811 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.812 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1101 ms
+2025-03-30 12:09:30.815 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.2269ms
+2025-03-30 12:09:30.817 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.827 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.829 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.830 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.5718 ms
+2025-03-30 12:09:30.833 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.7978ms
+2025-03-30 12:09:30.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.843 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.845 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.846 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.0836 ms
+2025-03-30 12:09:30.849 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.6128ms
+2025-03-30 12:09:30.851 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.860 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.862 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.863 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1690 ms
+2025-03-30 12:09:30.866 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.8349ms
+2025-03-30 12:09:30.868 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.877 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.879 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.880 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.4405 ms
+2025-03-30 12:09:30.885 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.9467ms
+2025-03-30 12:09:30.885 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.896 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.898 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.899 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.6914 ms
+2025-03-30 12:09:30.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.4749ms
+2025-03-30 12:09:30.905 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.913 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.915 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.917 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.8491 ms
+2025-03-30 12:09:30.923 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.3965ms
+2025-03-30 12:09:30.927 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.934 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.936 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.939 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.5896 ms
+2025-03-30 12:09:30.942 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.1479ms
+2025-03-30 12:09:30.945 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:30.952 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:30.955 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:30.956 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.5918 ms
+2025-03-30 12:09:30.959 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.6834ms
+2025-03-30 12:09:32.005 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.021 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.025 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.028 +05:30 [INF] HTTP GET /Account/Login responded 302 in 7.9655 ms
+2025-03-30 12:09:32.032 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 26.9767ms
+2025-03-30 12:09:32.040 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.050 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.054 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.058 +05:30 [INF] HTTP GET /Account/Login responded 302 in 8.2427 ms
+2025-03-30 12:09:32.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 22.7406ms
+2025-03-30 12:09:32.065 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.077 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.079 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.080 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.8703 ms
+2025-03-30 12:09:32.083 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 18.4218ms
+2025-03-30 12:09:32.088 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.100 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.104 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.107 +05:30 [INF] HTTP GET /Account/Login responded 302 in 7.2874 ms
+2025-03-30 12:09:32.111 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 23.7799ms
+2025-03-30 12:09:32.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.128 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.130 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.132 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.5294 ms
+2025-03-30 12:09:32.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 23.506ms
+2025-03-30 12:09:32.142 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.151 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.157 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.159 +05:30 [INF] HTTP GET /Account/Login responded 302 in 7.9225 ms
+2025-03-30 12:09:32.163 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 21.8081ms
+2025-03-30 12:09:32.167 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.178 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.180 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.182 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.3908 ms
+2025-03-30 12:09:32.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 21.538ms
+2025-03-30 12:09:32.192 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.201 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.206 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.208 +05:30 [INF] HTTP GET /Account/Login responded 302 in 7.2805 ms
+2025-03-30 12:09:32.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 20.7224ms
+2025-03-30 12:09:32.215 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.229 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.231 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.233 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.3224 ms
+2025-03-30 12:09:32.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 23.5188ms
+2025-03-30 12:09:32.242 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.250 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.255 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.257 +05:30 [INF] HTTP GET /Account/Login responded 302 in 7.2648 ms
+2025-03-30 12:09:32.260 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 18.39ms
+2025-03-30 12:09:32.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.274 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.275 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.277 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.5067 ms
+2025-03-30 12:09:32.280 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.1969ms
+2025-03-30 12:09:32.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.293 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.295 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.296 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.9423 ms
+2025-03-30 12:09:32.299 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.503ms
+2025-03-30 12:09:32.302 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.311 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.312 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.313 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.0955 ms
+2025-03-30 12:09:32.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.4728ms
+2025-03-30 12:09:32.321 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.332 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.333 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.335 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.7260 ms
+2025-03-30 12:09:32.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.391ms
+2025-03-30 12:09:32.341 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.349 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.351 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.353 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.1665 ms
+2025-03-30 12:09:32.356 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.6946ms
+2025-03-30 12:09:32.359 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.366 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.368 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.370 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.4313 ms
+2025-03-30 12:09:32.373 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.067ms
+2025-03-30 12:09:32.376 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.383 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.385 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.388 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.8038 ms
+2025-03-30 12:09:32.390 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.8585ms
+2025-03-30 12:09:32.393 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.400 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.403 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.404 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.0031 ms
+2025-03-30 12:09:32.407 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.0809ms
+2025-03-30 12:09:32.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.417 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.419 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.421 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.2193 ms
+2025-03-30 12:09:32.423 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.3263ms
+2025-03-30 12:09:32.426 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:32.433 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:32.437 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:32.439 +05:30 [INF] HTTP GET /Account/Login responded 302 in 6.3135 ms
+2025-03-30 12:09:32.442 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.7295ms
+2025-03-30 12:09:33.190 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.199 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.204 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.208 +05:30 [INF] HTTP GET /Account/Login responded 302 in 9.1534 ms
+2025-03-30 12:09:33.214 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 24.2387ms
+2025-03-30 12:09:33.217 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.233 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.235 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.238 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.7066 ms
+2025-03-30 12:09:33.243 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 26.5502ms
+2025-03-30 12:09:33.246 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.258 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.260 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.262 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.2172 ms
+2025-03-30 12:09:33.265 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.648ms
+2025-03-30 12:09:33.268 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.276 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.277 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.279 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.2234 ms
+2025-03-30 12:09:33.281 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.0995ms
+2025-03-30 12:09:33.285 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.293 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.295 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.296 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.2281 ms
+2025-03-30 12:09:33.299 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.081ms
+2025-03-30 12:09:33.303 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.310 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.313 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.314 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.9137 ms
+2025-03-30 12:09:33.317 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.3399ms
+2025-03-30 12:09:33.323 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.331 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.333 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.334 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.5493 ms
+2025-03-30 12:09:33.339 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.0729ms
+2025-03-30 12:09:33.341 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.349 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.352 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.354 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.9215 ms
+2025-03-30 12:09:33.357 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.4177ms
+2025-03-30 12:09:33.360 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.368 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.371 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.373 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.0956 ms
+2025-03-30 12:09:33.376 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.6565ms
+2025-03-30 12:09:33.379 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.390 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.391 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.393 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.7836 ms
+2025-03-30 12:09:33.396 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.7235ms
+2025-03-30 12:09:33.399 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.441 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.445 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.447 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.4774 ms
+2025-03-30 12:09:33.452 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 52.9555ms
+2025-03-30 12:09:33.457 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.467 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.470 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.472 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.2931 ms
+2025-03-30 12:09:33.476 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.1762ms
+2025-03-30 12:09:33.479 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.489 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.492 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.493 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.3914 ms
+2025-03-30 12:09:33.498 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.825ms
+2025-03-30 12:09:33.502 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.513 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.515 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.517 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.2592 ms
+2025-03-30 12:09:33.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.7526ms
+2025-03-30 12:09:33.526 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.537 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.540 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.541 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.0333 ms
+2025-03-30 12:09:33.546 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.2845ms
+2025-03-30 12:09:33.548 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.559 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.561 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.563 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.4152 ms
+2025-03-30 12:09:33.566 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 18.1195ms
+2025-03-30 12:09:33.570 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.579 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.581 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.583 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.6790 ms
+2025-03-30 12:09:33.587 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.2193ms
+2025-03-30 12:09:33.590 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.599 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.601 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.604 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.0733 ms
+2025-03-30 12:09:33.608 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 18.0272ms
+2025-03-30 12:09:33.611 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.619 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.621 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.623 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.9666 ms
+2025-03-30 12:09:33.626 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.8152ms
+2025-03-30 12:09:33.629 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:33.640 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:33.641 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:33.643 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.4085 ms
+2025-03-30 12:09:33.646 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.7113ms
+2025-03-30 12:09:34.886 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.895 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.898 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.901 +05:30 [INF] HTTP GET /Account/Login responded 302 in 6.6238 ms
+2025-03-30 12:09:34.907 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 21.4442ms
+2025-03-30 12:09:34.910 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.921 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.923 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.925 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.4920 ms
+2025-03-30 12:09:34.928 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 18.5281ms
+2025-03-30 12:09:34.930 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.940 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.942 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.943 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.6676 ms
+2025-03-30 12:09:34.946 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.8532ms
+2025-03-30 12:09:34.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.957 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.959 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.961 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.2524 ms
+2025-03-30 12:09:34.963 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.5098ms
+2025-03-30 12:09:34.966 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.975 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.976 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.978 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1357 ms
+2025-03-30 12:09:34.981 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.1699ms
+2025-03-30 12:09:34.983 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:34.993 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:34.995 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:34.996 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.3821 ms
+2025-03-30 12:09:34.999 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.3193ms
+2025-03-30 12:09:35.003 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.011 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.012 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.014 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.1762 ms
+2025-03-30 12:09:35.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.4066ms
+2025-03-30 12:09:35.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.029 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.031 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.033 +05:30 [INF] HTTP GET /Account/Login responded 302 in 4.1366 ms
+2025-03-30 12:09:35.037 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.5483ms
+2025-03-30 12:09:35.039 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.045 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.048 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.050 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.3909 ms
+2025-03-30 12:09:35.054 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.2841ms
+2025-03-30 12:09:35.057 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.066 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.069 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.071 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.6557 ms
+2025-03-30 12:09:35.075 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.031ms
+2025-03-30 12:09:35.079 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.089 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.091 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.092 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.2565 ms
+2025-03-30 12:09:35.096 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.2434ms
+2025-03-30 12:09:35.098 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.107 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.109 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.111 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.6646 ms
+2025-03-30 12:09:35.114 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.7278ms
+2025-03-30 12:09:35.116 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.126 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.127 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.129 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.5914 ms
+2025-03-30 12:09:35.132 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.9543ms
+2025-03-30 12:09:35.136 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.144 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.146 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.148 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.9583 ms
+2025-03-30 12:09:35.152 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.419ms
+2025-03-30 12:09:35.155 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.163 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.165 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.166 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.4564 ms
+2025-03-30 12:09:35.170 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.1798ms
+2025-03-30 12:09:35.172 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.181 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.183 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.185 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.8123 ms
+2025-03-30 12:09:35.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.9347ms
+2025-03-30 12:09:35.191 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.196 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.200 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.202 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.5484 ms
+2025-03-30 12:09:35.205 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.0043ms
+2025-03-30 12:09:35.207 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.215 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.217 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.218 +05:30 [INF] HTTP GET /Account/Login responded 302 in 3.4602 ms
+2025-03-30 12:09:35.222 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.7334ms
+2025-03-30 12:09:35.224 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.229 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.233 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.235 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.7512 ms
+2025-03-30 12:09:35.239 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.8932ms
+2025-03-30 12:09:35.241 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:09:35.249 +05:30 [INF] Identity.Application was not authenticated. Failure message: Ticket expired
+2025-03-30 12:09:35.252 +05:30 [INF] Accessing expired session, Key:ca7edfa5-ba4f-faad-0c8c-0b0934552e76
+2025-03-30 12:09:35.254 +05:30 [INF] HTTP GET /Account/Login responded 302 in 5.2730 ms
+2025-03-30 12:09:35.257 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.0551ms
+2025-03-30 12:10:54.442 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.464 +05:30 [INF] HTTP GET /Account/Login responded 302 in 2.3714 ms
+2025-03-30 12:10:54.474 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 32.5184ms
+2025-03-30 12:10:54.477 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.493 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.5554 ms
+2025-03-30 12:10:54.500 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 23.4663ms
+2025-03-30 12:10:54.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.520 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1770 ms
+2025-03-30 12:10:54.525 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 21.2366ms
+2025-03-30 12:10:54.528 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.540 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1446 ms
+2025-03-30 12:10:54.544 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.504ms
+2025-03-30 12:10:54.547 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.556 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2372 ms
+2025-03-30 12:10:54.560 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.1028ms
+2025-03-30 12:10:54.563 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.574 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1501 ms
+2025-03-30 12:10:54.577 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.9949ms
+2025-03-30 12:10:54.580 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.591 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2040 ms
+2025-03-30 12:10:54.594 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.6015ms
+2025-03-30 12:10:54.597 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.608 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1805 ms
+2025-03-30 12:10:54.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.933ms
+2025-03-30 12:10:54.614 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.627 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2993 ms
+2025-03-30 12:10:54.630 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.3763ms
+2025-03-30 12:10:54.634 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.644 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2538 ms
+2025-03-30 12:10:54.648 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.2051ms
+2025-03-30 12:10:54.651 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.667 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2301 ms
+2025-03-30 12:10:54.671 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 20.3999ms
+2025-03-30 12:10:54.674 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.685 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.7052 ms
+2025-03-30 12:10:54.689 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.4826ms
+2025-03-30 12:10:54.692 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.706 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1967 ms
+2025-03-30 12:10:54.710 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.8913ms
+2025-03-30 12:10:54.713 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.724 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.3837 ms
+2025-03-30 12:10:54.727 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.905ms
+2025-03-30 12:10:54.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.741 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.3228 ms
+2025-03-30 12:10:54.744 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.3157ms
+2025-03-30 12:10:54.747 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.757 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2368 ms
+2025-03-30 12:10:54.761 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.7852ms
+2025-03-30 12:10:54.764 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.771 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2455 ms
+2025-03-30 12:10:54.776 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.6815ms
+2025-03-30 12:10:54.779 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.788 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2328 ms
+2025-03-30 12:10:54.792 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.2767ms
+2025-03-30 12:10:54.794 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.805 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1343 ms
+2025-03-30 12:10:54.808 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.9181ms
+2025-03-30 12:10:54.811 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:54.820 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2388 ms
+2025-03-30 12:10:54.823 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.7421ms
+2025-03-30 12:10:55.840 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.850 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2525 ms
+2025-03-30 12:10:55.857 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 17.4605ms
+2025-03-30 12:10:55.860 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.872 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1476 ms
+2025-03-30 12:10:55.876 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 16.0148ms
+2025-03-30 12:10:55.878 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.890 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2714 ms
+2025-03-30 12:10:55.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.1022ms
+2025-03-30 12:10:55.896 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.907 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1147 ms
+2025-03-30 12:10:55.910 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.3736ms
+2025-03-30 12:10:55.912 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.921 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2640 ms
+2025-03-30 12:10:55.924 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.8519ms
+2025-03-30 12:10:55.926 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.936 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1119 ms
+2025-03-30 12:10:55.939 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.7715ms
+2025-03-30 12:10:55.941 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.949 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.5783 ms
+2025-03-30 12:10:55.952 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.0949ms
+2025-03-30 12:10:55.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.963 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2344 ms
+2025-03-30 12:10:55.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.7909ms
+2025-03-30 12:10:55.970 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.977 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2491 ms
+2025-03-30 12:10:55.981 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.1722ms
+2025-03-30 12:10:55.984 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:55.995 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1185 ms
+2025-03-30 12:10:55.998 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.1755ms
+2025-03-30 12:10:56.001 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.009 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1735 ms
+2025-03-30 12:10:56.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.0109ms
+2025-03-30 12:10:56.014 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.022 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2280 ms
+2025-03-30 12:10:56.025 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 10.9605ms
+2025-03-30 12:10:56.027 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.037 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2378 ms
+2025-03-30 12:10:56.040 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.016ms
+2025-03-30 12:10:56.042 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.052 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2467 ms
+2025-03-30 12:10:56.055 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.772ms
+2025-03-30 12:10:56.056 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.066 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.4445 ms
+2025-03-30 12:10:56.070 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.4618ms
+2025-03-30 12:10:56.072 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.080 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2579 ms
+2025-03-30 12:10:56.084 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.5146ms
+2025-03-30 12:10:56.087 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.096 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2925 ms
+2025-03-30 12:10:56.099 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.5081ms
+2025-03-30 12:10:56.103 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.111 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1293 ms
+2025-03-30 12:10:56.113 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 10.8343ms
+2025-03-30 12:10:56.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.125 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.3613 ms
+2025-03-30 12:10:56.128 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.6733ms
+2025-03-30 12:10:56.130 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.139 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1194 ms
+2025-03-30 12:10:56.141 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.764ms
+2025-03-30 12:10:56.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.820 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.3116 ms
+2025-03-30 12:10:56.828 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 19.249ms
+2025-03-30 12:10:56.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.847 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2539 ms
+2025-03-30 12:10:56.854 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 24.0589ms
+2025-03-30 12:10:56.857 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.872 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.5010 ms
+2025-03-30 12:10:56.879 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 21.7264ms
+2025-03-30 12:10:56.882 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.893 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0944 ms
+2025-03-30 12:10:56.897 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.7065ms
+2025-03-30 12:10:56.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.912 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1698 ms
+2025-03-30 12:10:56.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 14.5035ms
+2025-03-30 12:10:56.919 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.928 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2418 ms
+2025-03-30 12:10:56.931 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.0161ms
+2025-03-30 12:10:56.935 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.944 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0874 ms
+2025-03-30 12:10:56.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.0514ms
+2025-03-30 12:10:56.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.959 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2181 ms
+2025-03-30 12:10:56.961 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.8363ms
+2025-03-30 12:10:56.963 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.973 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2423 ms
+2025-03-30 12:10:56.976 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.6558ms
+2025-03-30 12:10:56.978 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:56.988 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2776 ms
+2025-03-30 12:10:56.991 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 13.0038ms
+2025-03-30 12:10:56.993 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.002 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0948 ms
+2025-03-30 12:10:57.004 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.0496ms
+2025-03-30 12:10:57.006 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.016 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2270 ms
+2025-03-30 12:10:57.019 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.8972ms
+2025-03-30 12:10:57.021 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.030 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.1775 ms
+2025-03-30 12:10:57.033 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.2102ms
+2025-03-30 12:10:57.036 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.044 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2548 ms
+2025-03-30 12:10:57.047 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.4968ms
+2025-03-30 12:10:57.051 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.059 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2487 ms
+2025-03-30 12:10:57.062 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.1215ms
+2025-03-30 12:10:57.064 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.076 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2042 ms
+2025-03-30 12:10:57.079 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 15.302ms
+2025-03-30 12:10:57.081 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.091 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0924 ms
+2025-03-30 12:10:57.093 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.6974ms
+2025-03-30 12:10:57.095 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.104 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0977 ms
+2025-03-30 12:10:57.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.8905ms
+2025-03-30 12:10:57.109 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.118 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.0891 ms
+2025-03-30 12:10:57.121 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 11.7199ms
+2025-03-30 12:10:57.123 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Login - null null
+2025-03-30 12:10:57.132 +05:30 [INF] HTTP GET /Account/Login responded 302 in 0.2628 ms
+2025-03-30 12:10:57.135 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Login - 302 0 null 12.8191ms

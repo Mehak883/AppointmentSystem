@@ -1,0 +1,44 @@
+﻿@model AppointmentSystem.Dtos.Admin.AdminRequestDto
+
+@{
+    ViewData["Title"] = "Register Admin";
+}
+
+
+
+<div class="container mt-4">
+
+    <h2 class="main-color">Register New Admin</h2>
+    <form asp-controller="Admin" asp-action="CreateAdmin" method="post">
+        <div class="mb-3">
+            <label asp-for="FullName"  class="form-label"></label>
+            <input asp-for="FullName" class="form-control" required />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" type="password" class="form-control" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword" class="form-label">ConfirmPassword</label>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" required />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-color btn">Register</button>
+    </form>
+</div>
+@section Scripts {
+    @{
+                <partial name="_ValidationScriptsPartial"/>
+    }
+}

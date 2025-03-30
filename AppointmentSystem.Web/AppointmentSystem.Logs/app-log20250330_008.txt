@@ -1,0 +1,300 @@
+2025-03-30 12:21:02.135 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-30 12:21:03.357 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:21:03.427 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:21:03.438 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:21:03.443 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:21:03.460 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-30 12:21:03.496 +05:30 [INF] Admin user 'mhk@lng.com' already exists.
+2025-03-30 12:21:03.966 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-30 12:21:03.970 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-30 12:21:04.029 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-30 12:21:04.033 +05:30 [INF] Hosting environment: Development
+2025-03-30 12:21:04.035 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-30 12:21:04.174 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-30 12:21:04.333 +05:30 [INF] Accessing expired session, Key:67cdc01a-cdba-a89a-8f3f-246d0611d3b1
+2025-03-30 12:21:04.339 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:21:04.353 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-30 12:21:04.370 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-30 12:21:04.535 +05:30 [INF] Executed ViewResult - view Login executed in 165.4395ms.
+2025-03-30 12:21:04.545 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 185.5903ms
+2025-03-30 12:21:04.551 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:21:04.558 +05:30 [INF] HTTP GET / responded 200 in 271.3766 ms
+2025-03-30 12:21:04.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-30 12:21:04.569 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-30 12:21:04.575 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 410.8694ms
+2025-03-30 12:21:04.605 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 36.2397ms
+2025-03-30 12:21:04.645 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 75.7748ms
+2025-03-30 12:21:04.670 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/favicon.ico - null null
+2025-03-30 12:21:04.679 +05:30 [INF] The file /favicon.ico was not modified
+2025-03-30 12:21:04.684 +05:30 [INF] HTTP GET /favicon.ico responded 304 in 9.6696 ms
+2025-03-30 12:21:04.689 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/favicon.ico - 304 null image/x-icon 19.3911ms
+2025-03-30 12:22:14.751 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/ - application/x-www-form-urlencoded 267
+2025-03-30 12:22:14.778 +05:30 [INF] Accessing expired session, Key:67cdc01a-cdba-a89a-8f3f-246d0611d3b1
+2025-03-30 12:22:14.781 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:22:14.797 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AppointmentSystem.Dtos.LoginDto) on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-30 12:22:14.894 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-30 12:22:15.089 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-03-30 12:22:15.141 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-30 12:22:15.159 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:22:15.177 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-03-30 12:22:15.189 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-03-30 12:22:15.195 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-03-30 12:22:15.204 +05:30 [INF] Executing RedirectResult, redirecting to /Admin/Dashboard.
+2025-03-30 12:22:15.210 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 401.8427ms
+2025-03-30 12:22:15.212 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:22:15.216 +05:30 [INF] Session started; Key:67cdc01a-cdba-a89a-8f3f-246d0611d3b1, Id:50f69d9e-5d23-2810-8bb5-7bf2f4508938
+2025-03-30 12:22:15.221 +05:30 [INF] HTTP POST / responded 302 in 445.7914 ms
+2025-03-30 12:22:15.226 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/ - 302 0 null 475.4105ms
+2025-03-30 12:22:15.227 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.254 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 15.9812 ms
+2025-03-30 12:22:15.262 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 35.4224ms
+2025-03-30 12:22:15.265 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.279 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 1.9993 ms
+2025-03-30 12:22:15.283 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 18.1453ms
+2025-03-30 12:22:15.288 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.297 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6391 ms
+2025-03-30 12:22:15.300 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.1204ms
+2025-03-30 12:22:15.305 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.314 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6443 ms
+2025-03-30 12:22:15.319 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.739ms
+2025-03-30 12:22:15.322 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.334 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 1.0971 ms
+2025-03-30 12:22:15.340 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 18.4536ms
+2025-03-30 12:22:15.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.355 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6802 ms
+2025-03-30 12:22:15.359 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.1632ms
+2025-03-30 12:22:15.361 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.373 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6429 ms
+2025-03-30 12:22:15.376 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.0137ms
+2025-03-30 12:22:15.379 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.391 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.8224 ms
+2025-03-30 12:22:15.395 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.7208ms
+2025-03-30 12:22:15.399 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.410 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6026 ms
+2025-03-30 12:22:15.414 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.2805ms
+2025-03-30 12:22:15.416 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.428 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6789 ms
+2025-03-30 12:22:15.431 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.1652ms
+2025-03-30 12:22:15.434 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.445 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6875 ms
+2025-03-30 12:22:15.449 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.8653ms
+2025-03-30 12:22:15.453 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.462 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6389 ms
+2025-03-30 12:22:15.466 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.9787ms
+2025-03-30 12:22:15.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.479 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6350 ms
+2025-03-30 12:22:15.483 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.9849ms
+2025-03-30 12:22:15.487 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.497 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6872 ms
+2025-03-30 12:22:15.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.3831ms
+2025-03-30 12:22:15.506 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.515 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7345 ms
+2025-03-30 12:22:15.520 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.0445ms
+2025-03-30 12:22:15.523 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.532 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6047 ms
+2025-03-30 12:22:15.536 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.0462ms
+2025-03-30 12:22:15.539 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.548 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5947 ms
+2025-03-30 12:22:15.559 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 21.1315ms
+2025-03-30 12:22:15.562 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.572 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6072 ms
+2025-03-30 12:22:15.576 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.1907ms
+2025-03-30 12:22:15.578 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:15.588 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6043 ms
+2025-03-30 12:22:15.591 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.127ms
+2025-03-30 12:22:16.636 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.648 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.9661 ms
+2025-03-30 12:22:16.655 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 19.3802ms
+2025-03-30 12:22:16.658 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.676 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 1.6200 ms
+2025-03-30 12:22:16.681 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 23.5239ms
+2025-03-30 12:22:16.686 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.705 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7032 ms
+2025-03-30 12:22:16.710 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 24.5161ms
+2025-03-30 12:22:16.713 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.723 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7233 ms
+2025-03-30 12:22:16.726 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.4701ms
+2025-03-30 12:22:16.729 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.740 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6985 ms
+2025-03-30 12:22:16.743 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.5289ms
+2025-03-30 12:22:16.746 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.757 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.8091 ms
+2025-03-30 12:22:16.760 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.3339ms
+2025-03-30 12:22:16.763 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.774 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6853 ms
+2025-03-30 12:22:16.777 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.6633ms
+2025-03-30 12:22:16.780 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.792 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6687 ms
+2025-03-30 12:22:16.795 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.5979ms
+2025-03-30 12:22:16.798 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.808 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6514 ms
+2025-03-30 12:22:16.811 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.9287ms
+2025-03-30 12:22:16.814 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.825 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.8437 ms
+2025-03-30 12:22:16.828 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.3351ms
+2025-03-30 12:22:16.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.841 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6749 ms
+2025-03-30 12:22:16.844 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.9694ms
+2025-03-30 12:22:16.847 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.856 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7149 ms
+2025-03-30 12:22:16.859 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.1365ms
+2025-03-30 12:22:16.862 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.874 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7800 ms
+2025-03-30 12:22:16.878 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.1844ms
+2025-03-30 12:22:16.881 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.893 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6743 ms
+2025-03-30 12:22:16.896 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.2294ms
+2025-03-30 12:22:16.899 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.909 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6908 ms
+2025-03-30 12:22:16.912 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.6453ms
+2025-03-30 12:22:16.915 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.931 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5921 ms
+2025-03-30 12:22:16.935 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 20.847ms
+2025-03-30 12:22:16.938 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.947 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6502 ms
+2025-03-30 12:22:16.951 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.4879ms
+2025-03-30 12:22:16.954 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.963 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5777 ms
+2025-03-30 12:22:16.966 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.8413ms
+2025-03-30 12:22:16.970 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.978 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5173 ms
+2025-03-30 12:22:16.981 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.069ms
+2025-03-30 12:22:16.985 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:16.995 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5239 ms
+2025-03-30 12:22:16.998 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.8647ms
+2025-03-30 12:22:22.023 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.037 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.7864 ms
+2025-03-30 12:22:22.044 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 20.9078ms
+2025-03-30 12:22:22.047 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.060 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6682 ms
+2025-03-30 12:22:22.067 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 20.5858ms
+2025-03-30 12:22:22.069 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.082 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 1.2185 ms
+2025-03-30 12:22:22.086 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 17.2524ms
+2025-03-30 12:22:22.089 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.101 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3810 ms
+2025-03-30 12:22:22.104 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.2103ms
+2025-03-30 12:22:22.106 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.117 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6750 ms
+2025-03-30 12:22:22.120 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 14.4227ms
+2025-03-30 12:22:22.122 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.134 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5364 ms
+2025-03-30 12:22:22.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.4429ms
+2025-03-30 12:22:22.154 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.166 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 3.5719 ms
+2025-03-30 12:22:22.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 19.4877ms
+2025-03-30 12:22:22.176 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.189 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.6940 ms
+2025-03-30 12:22:22.192 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.5428ms
+2025-03-30 12:22:22.196 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.209 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.4866 ms
+2025-03-30 12:22:22.212 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 16.3549ms
+2025-03-30 12:22:22.216 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.224 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.4372 ms
+2025-03-30 12:22:22.228 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.0777ms
+2025-03-30 12:22:22.230 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.239 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3922 ms
+2025-03-30 12:22:22.242 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.1142ms
+2025-03-30 12:22:22.245 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.255 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3760 ms
+2025-03-30 12:22:22.260 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.6275ms
+2025-03-30 12:22:22.263 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.278 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.8108 ms
+2025-03-30 12:22:22.284 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 21.0594ms
+2025-03-30 12:22:22.287 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.302 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5712 ms
+2025-03-30 12:22:22.306 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 19.2467ms
+2025-03-30 12:22:22.309 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.320 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.5788 ms
+2025-03-30 12:22:22.324 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 15.3482ms
+2025-03-30 12:22:22.327 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.337 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3608 ms
+2025-03-30 12:22:22.340 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.6101ms
+2025-03-30 12:22:22.343 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.353 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.4994 ms
+2025-03-30 12:22:22.357 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 13.7864ms
+2025-03-30 12:22:22.359 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.376 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.4195 ms
+2025-03-30 12:22:22.379 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 20.2772ms
+2025-03-30 12:22:22.383 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.390 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3448 ms
+2025-03-30 12:22:22.394 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 11.2578ms
+2025-03-30 12:22:22.396 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-03-30 12:22:22.406 +05:30 [INF] HTTP GET /Admin/Dashboard responded 302 in 0.3770 ms
+2025-03-30 12:22:22.409 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 302 0 null 12.999ms
+2025-03-30 12:22:45.102 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-30 12:22:46.342 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:22:46.403 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:22:46.424 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:22:46.436 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-03-30 12:22:46.454 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-03-30 12:22:46.491 +05:30 [INF] Admin user 'mhk@lng.com' already exists.
+2025-03-30 12:22:46.748 +05:30 [INF] Now listening on: https://localhost:7013
+2025-03-30 12:22:46.751 +05:30 [INF] Now listening on: http://localhost:5085
+2025-03-30 12:22:46.795 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-30 12:22:46.801 +05:30 [INF] Hosting environment: Development
+2025-03-30 12:22:46.803 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-03-30 12:22:47.475 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-03-30 12:23:14.188 +05:30 [INF] Accessing expired session, Key:67cdc01a-cdba-a89a-8f3f-246d0611d3b1
+2025-03-30 12:23:33.335 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:23:33.348 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-03-30 12:23:33.363 +05:30 [INF] Executing ViewResult, running view Login.
+2025-03-30 12:23:33.472 +05:30 [INF] Executed ViewResult - view Login executed in 107.4016ms.
+2025-03-30 12:23:33.482 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 125.2304ms
+2025-03-30 12:23:33.487 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-03-30 12:23:33.527 +05:30 [INF] HTTP GET / responded 200 in 45921.0693 ms
+2025-03-30 12:23:33.532 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-30 12:23:33.532 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-03-30 12:23:33.549 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 46086.419ms
+2025-03-30 12:23:33.559 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 26.7123ms
+2025-03-30 12:23:33.624 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 92.1932ms

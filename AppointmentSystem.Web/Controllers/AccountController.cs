@@ -1,13 +1,14 @@
-﻿using AppointmentSystem.Web.DTOs;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using AppointmentSystem.Handlers.Login.Command;
 using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using AppointmentSystem.Dtos;
+using AppointmentSystem.Dtos.Admin;
+
 namespace AppointmentSystem.Web.Controllers
 {
-
     public class AccountController : Controller
     {
         private readonly IMediator _mediator;
@@ -18,8 +19,17 @@ namespace AppointmentSystem.Web.Controllers
             _mediator = mediator;
             _signInManager = signInManager;
         }
+
         public IActionResult Login()
         {
+            var userRole = HttpContext.Session.GetString("Role");
+
+            if (!string.IsNullOrEmpty(userRole))
+            {
+                // Redirect users to their respective dashboards
+                return RedirectToAction("RedirectToDashboard");
+            }
+
             return View();
         }
 
@@ -30,41 +40,60 @@ namespace AppointmentSystem.Web.Controllers
                 return View(loginDto);
 
             var command = new LoginRequest { Email = loginDto.Email, Password = loginDto.Password };
-            var isAuthenticated = await _mediator.Send(command);
+            var user = await _mediator.Send(command);
 
-            if (isAuthenticated)
+            if (user != null)
             {
-                var userRole = HttpContext.Session.GetString("Role");
-
-                if (userRole == "Admin")
-                {
-                    return RedirectToAction("Dashboard", "Admin");
-                }
-                else if (userRole == "Doctor")
-                {
-                    return RedirectToAction("Dashboard", "Doctor");
-                }
-                else if (userRole == "Patient")
-                {
-                    return RedirectToAction("Profile", "Patient");
-                }
-                else
-                {
-                    return RedirectToAction("AccessDenied", "Account");
-                }
+                // Redirect users based on their role
+                return RedirectToAction("RedirectToDashboard");
             }
 
-            ModelState.AddModelError("", "Invalid login attempt");
+            ModelState.AddModelError("InvalidCredentials", "Invalid email or password.");
             return View(loginDto);
         }
 
+        public IActionResult RedirectToDashboard()
+        {
+            var userRole = HttpContext.Session.GetString("Role");
+
+            if (string.IsNullOrEmpty(userRole))
+            {
+                return RedirectToAction("Login");
+            }
+
+            // Prevent redirect loop: Only redirect if the user is not already on their page
+            var currentPath = HttpContext.Request.Path.Value.ToLower();
+
+            if (userRole == "Admin" || userRole == "SuperAdmin")
+            {
+                if (!currentPath.StartsWith("/admin/dashboard"))
+                    return RedirectToAction("Dashboard", "Admin");
+            }
+            else if (userRole == "Doctor")
+            {
+                if (!currentPath.StartsWith("/doctor/dashboard"))
+                    return RedirectToAction("Dashboard", "Doctor");
+            }
+            else if (userRole == "Patient")
+            {
+                if (!currentPath.StartsWith("/patient/profile"))
+                    return RedirectToAction("Profile", "Patient");
+            }
+            else
+            {
+                return RedirectToAction("AccessDenied");
+            }
+
+            return RedirectToAction("Login");
+        }
 
         [Authorize]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             HttpContext.Session.Clear();
-            return RedirectToAction("Login","Account");
+            Response.Cookies.Delete(".AspNetCore.Identity.Application"); // Ensure session cookies are cleared
+            return RedirectToAction("Login");
         }
 
         public IActionResult AccessDenied()
