@@ -9,7 +9,6 @@ using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Data;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 

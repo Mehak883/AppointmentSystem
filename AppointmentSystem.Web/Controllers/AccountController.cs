@@ -44,7 +44,6 @@ namespace AppointmentSystem.Web.Controllers
 
             if (user != null)
             {
-                // Redirect users based on their role
                 return RedirectToAction("RedirectToDashboard");
             }
 
@@ -61,7 +60,6 @@ namespace AppointmentSystem.Web.Controllers
                 return RedirectToAction("Login");
             }
 
-            // Prevent redirect loop: Only redirect if the user is not already on their page
             var currentPath = HttpContext.Request.Path.Value.ToLower();
 
             if (userRole == "Admin" || userRole == "SuperAdmin")

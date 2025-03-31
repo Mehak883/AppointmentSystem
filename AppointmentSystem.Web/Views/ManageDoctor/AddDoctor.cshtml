@@ -1,0 +1,71 @@
+﻿@model AppointmentSystem.Dtos.Doctor.DoctorRequestDto
+
+@{
+    ViewData["Title"] = "Add Doctor";
+}
+<div class="container mt-4">
+<h2>Add Doctor</h2>
+   <form asp-controller="ManageDoctor" asp-action="AddDoctor" method="post">
+        <div class="mb-3">
+            <label asp-for="FullName"  class="form-label"></label>
+            <input asp-for="FullName" class="form-control" required />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Email" class="form-label"></label>
+            <input asp-for="Email" class="form-control" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label"></label>
+            <input asp-for="Password" type="password" class="form-control" required />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword" class="form-label">ConfirmPassword</label>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" required />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+         
+     <div class="row">  <div class="mb-3 col-6">
+            <label asp-for="StartTime" class="form-label">Start Time</label>
+        <input type="time" asp-for="StartTime"  class="form-control" required />
+         <span asp-validation-for="StartTime" class="text-danger"></span>
+        </div>
+           <div class="mb-3 col-6">
+            <label asp-for="EndTime" class="form-label">End Time</label>
+        <input type="time" asp-for="EndTime"  class="form-control" required />
+         <span asp-validation-for="EndTime" class="text-danger"></span>
+        </div>
+        </div>
+         <div class="mb-3">
+        <label asp-for="SlotDuration" class="form-label">Slot Duration (minutes):</label>
+        <input type="number" asp-for="SlotDuration" class="form-control" required min="15" max="60" />
+         <span asp-validation-for="SlotDuration" class="text-danger"></span>
+        </div>
+
+      <div class="mb-3">
+        <label>Specializations:</label>
+        <select asp-for="SpecializationIds" multiple required>
+            <option value="">Select</option>
+                @foreach (var specialization in ViewBag.Specializations)
+                {
+                        <option value="@specialization.SpecializationId">@specialization.SpecializationName</option>
+                }
+        </select>
+         <span asp-validation-for="SpecializationIds" class="text-danger"></span>
+
+    </div>
+        <button type="submit" class="btn-color btn">Register</button>
+    </form>
+
+         </div>
+
+@section Scripts {
+    @{
+     <partial name="_ValidationScriptsPartial"/>
+    }
+}

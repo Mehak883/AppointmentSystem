@@ -1,0 +1,102 @@
+﻿@using AppointmentSystem.Dtos.Doctor
+@model List<DoctorResponseDto>
+
+@{
+    ViewData["Title"] = "Doctors";
+}
+<div class="container mt-3">
+    <h2>Doctors List</h2>
+
+    <div class="row mb-3">
+    <div class="col-md-6 d-flex align-items-center">
+        <label for="specializationFilter" class="me-2">Filter by Specialization:</label>
+        <select id="specializationFilter" class="form-select w-50" >
+            <option value="">All Specializations</option>
+                @foreach (var spec in ViewBag.Specializations)
+                {
+                    <option value="@spec.SpecializationId">@spec.SpecializationName</option>
+                }
+        </select>
+    </div>
+ <div class="col-md-6 d-flex justify-content-end">
+        <a asp-controller="ManageDoctor" asp-action="AddDoctor" class="btn btn-color">Add New Doctor</a>
+    </div>
+</div>
+
+
+
+
+<table class="table table-bordered">
+    <thead >
+        <tr class="main-bg-color text-white">
+            <th>Doctor ID</th>
+            <th>Full Name</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Slot Duration</th>
+            <th>Specializations</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+   <tbody id="doctorsTable">
+            @foreach (var doctor in Model)
+            {
+            <tr data-specializations="@string.Join(",", doctor.Specializations.Select(s => s.SpecializationId))">
+                <td>@doctor.DoctorId</td>
+                <td>@doctor.FullName</td>
+                <td>@doctor.StartTime</td>
+                <td>@doctor.EndTime</td>
+                <td>@doctor.SlotDuration min</td>
+                <td>@string.Join(", ", doctor.Specializations.Select(s => s.SpecializationName))</td> 
+                <td>
+                        <a asp-action="UpdateDoctor" asp-controller="ManageDoctor"  asp-route-id="@doctor.DoctorId" class="btn btn-warning">Update</a>
+                    <button class="btn btn-danger" onclick="confirmDelete(@doctor.DoctorId)">Delete</button>
+                </td>
+            </tr>
+            }
+</tbody>
+
+</table>
+</div>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterDropdown = document.getElementById("specializationFilter");
+        const tableRows = document.querySelectorAll("#doctorsTable tr");
+
+        filterDropdown.addEventListener("change", function () {
+            const selectedSpecialization = this.value; // Get selected ID
+
+            tableRows.forEach(row => {
+                const specializations = row.dataset.specializations.split(","); // Get IDs as an array
+
+                if (!selectedSpecialization || specializations.includes(selectedSpecialization)) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
+
+<script>
+    function confirmDelete(drId) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "This action cannot be undone!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!",
+            cancelButtonText: "Cancel"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/ManageDoctor/DeleteDoctor?id=" + drId;
+            }
+        });
+    }
+</script>

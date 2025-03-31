@@ -19,7 +19,7 @@
                         </li>
                 }
                 <li class="nav-item">
-                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ManageDoctors">Manage Doctors</a>
+                    <a class="nav-link nav-color" asp-controller="ManageDoctor" asp-action="ViewAll">Manage Doctors</a>
                 </li>
                  <li class="nav-item">
                     <a class="nav-link nav-color" asp-controller="Admin" asp-action="ManageSpecialization">Manage Specialization</a>
@@ -29,11 +29,10 @@
                 </li>
             </ul>
 
-            <!-- Profile Dropdown with Person Icon -->
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
                     <div class="icon-circle">
-                        <i class="bi bi-person-fill"></i>  <!-- Bootstrap Person Icon -->
+                        <i class="bi bi-person-fill"></i>  
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="profileDropdown">

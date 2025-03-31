@@ -84,9 +84,9 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication();  // Ensure authentication is checked first
-app.UseAuthorization();   // Then, apply authorization policies
-app.UseSession();         // Use session after authentication & authorization
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseSession();
 app.Use(async (context, next) =>
 {
     var sessionUser = context.Session.GetString("Role");
@@ -95,8 +95,7 @@ app.Use(async (context, next) =>
     {
         var currentPath = context.Request.Path.Value.ToLower();
 
-        // Allow subpages (e.g., /Admin/ManageAdmins) without redirecting
-        bool isAdminArea = currentPath.StartsWith("/admin");
+        bool isAdminArea = currentPath.StartsWith("/admin") || currentPath.StartsWith("/managedoctor");
         bool isDoctorArea = currentPath.StartsWith("/doctor");
         bool isPatientArea = currentPath.StartsWith("/patient");
 
