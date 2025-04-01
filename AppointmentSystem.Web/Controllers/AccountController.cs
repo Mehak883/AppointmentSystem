@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using AppointmentSystem.Dtos.Admin;
 using AppointmentSystem.Dtos.Identity;
+using AppointmentSystem.Handlers.Patient.Command;
+using AppointmentSystem.Dtos.Patient;
 
 namespace AppointmentSystem.Web.Controllers
 {
@@ -51,6 +53,24 @@ namespace AppointmentSystem.Web.Controllers
             return View(loginDto);
         }
 
+        public IActionResult Signup()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Signup(RegisterPatientRequestDto request)
+        {
+            if (!ModelState.IsValid)
+                return View(request);
+            var command = new RegisterPatientRequest { Email = request.Email, FullName = request.FullName, Gender = request.Gender, Password = request.Password };
+            var result = await _mediator.Send(command);
+            if (result)
+                return RedirectToAction("Dashboard", "Patient"); // Redirect to patient dashboard
+
+            ModelState.AddModelError("", "Signup failed. Please try again.");
+            return View(request);
+        }
         public IActionResult RedirectToDashboard()
         {
             var userRole = HttpContext.Session.GetString("Role");

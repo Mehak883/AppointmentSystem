@@ -33,4 +33,8 @@
     <ProjectReference Include="..\AppointmentSystem.Models\AppointmentSystem.Models.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Patient\Query\" />
+  </ItemGroup>
+
 </Project>
