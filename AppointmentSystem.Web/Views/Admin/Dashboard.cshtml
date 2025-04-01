@@ -45,6 +45,12 @@
                     <li class="dropdown-item text-center">
                         <span class="badge bg-primary">@Model.Role</span>
                     </li>
+
+                      <li>
+            <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                Forgot Password
+            </a>
+        </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
                         <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">Logout</a>
@@ -54,3 +60,6 @@
         </div>
     </div>
 </nav>
+<form method="post" asp-controller="Admin" asp-action="GenerateTomorrowSlots">
+    <button type="submit" class="btn btn-primary">Generate Tomorrow's Slots</button>
+</form>

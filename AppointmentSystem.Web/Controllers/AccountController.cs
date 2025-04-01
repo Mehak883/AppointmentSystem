@@ -4,8 +4,8 @@ using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using AppointmentSystem.Dtos;
 using AppointmentSystem.Dtos.Admin;
+using AppointmentSystem.Dtos.Identity;
 
 namespace AppointmentSystem.Web.Controllers
 {
@@ -93,6 +93,35 @@ namespace AppointmentSystem.Web.Controllers
             Response.Cookies.Delete(".AspNetCore.Identity.Application"); // Ensure session cookies are cleared
             return RedirectToAction("Login");
         }
+        [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ChangePasswordRequestDto changePasswordRequestDto)
+        {
+            var userId = HttpContext.Session.GetString("UserId");
+            if (string.IsNullOrEmpty(userId))
+            {
+                return RedirectToAction("Login");
+            }
+
+            var command = new ChangePasswordRequest
+            {
+                UserId = userId,
+                OldPassword = changePasswordRequestDto.OldPassword,
+                NewPassword = changePasswordRequestDto.NewPassword
+            };
+
+            var success = await _mediator.Send(command);
+
+            if (success)
+            {
+                HttpContext.Session.Clear(); // Log out the user
+                return RedirectToAction("Login");
+            }
+
+            ModelState.AddModelError("Error", "Password reset failed.");
+            return View("ResetPassword"); // Adjust based on your UI
+        }
+
 
         public IActionResult AccessDenied()
         {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace AppointmentSystem.Dtos
+namespace AppointmentSystem.Dtos.Identity
 {
     public class LoginDto
     {

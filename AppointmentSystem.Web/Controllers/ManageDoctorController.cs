@@ -2,9 +2,7 @@
 using AppointmentSystem.Dtos.Specialization;
 using AppointmentSystem.Handlers.Doctor.Command;
 using AppointmentSystem.Handlers.Doctor.Query;
-using AppointmentSystem.Handlers.Specializations.Command;
 using AppointmentSystem.Handlers.Specializations.Query;
-using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

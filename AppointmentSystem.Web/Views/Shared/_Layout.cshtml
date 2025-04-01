@@ -41,5 +41,39 @@
 
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-labelledby="forgotPasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Reset Password</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form asp-controller="Account" asp-action="ResetPassword" method="post">
+                       <div class="mb-3">
+            <label for="OldPassword" class="form-label">Old Password</label>
+            <input id="OldPassword" name="OldPassword" type="password" class="form-control" required />
+            @* <span asp-validation-for="OldPassword" class="text-danger"></span> *@
+        </div>
+                      <div class="mb-3">
+            <label for="NewPassword" class="form-label">New Password</label>
+            <input id="NewPassword" name="NewPassword" type="password" class="form-control" required />
+            @* <span asp-validation-for="NewPassword" class="text-danger"></span> *@
+        </div>
+
+        <div class="mb-3">
+            <label for="ConfirmPassword" class="form-label">ConfirmPassword</label>
+            <input id="ConfirmPassword" name ="ConfirmPassword" type="password" class="form-control" required />
+            @* <span asp-validation-for="ConfirmPassword" class="text-danger"></span> *@
+        </div>
+                    
+                    <button type="submit" class="btn btn-primary">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
+
 </html>

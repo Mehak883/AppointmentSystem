@@ -4,7 +4,6 @@ using AppointmentSystem.Dtos.Specialization;
 namespace AppointmentSystem.Dtos.Doctor
 {
    public class DoctorResponseDto
-    
     {
         public int DoctorId { get; set; }
         public string FullName { get; set; }

@@ -1,0 +1,139 @@
+﻿@model AppointmentSystem.Dtos.Doctor.DoctorDashboardDto
+
+<nav class="navbar navbar-expand-lg  nav-bg-color">
+    <div class="container-fluid">
+        <a class="navbar-brand  text-white" href="#">Admin Dashboard</a>
+
+
+        <button class="navbar-toggler nav-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <i class="bi bi-list"></i> 
+</button> 
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+               
+               
+                <li class="nav-item">
+                    <a class="nav-link nav-color" asp-controller="Doctor" asp-action="ApplyLeave">Apply Leave</a>
+                </li>
+            </ul>
+
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
+                    <div class="icon-circle">
+                        <i class="bi bi-person-fill"></i>  
+                    </div>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="profileDropdown">
+                    <li class="dropdown-item text-center">
+                        <strong>@Model.Fullname</strong> 
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <small>@Model.Email</small>
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <span class="badge main-bg-color">@Model.Role</span>
+                    </li>
+
+                      <li>
+            <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                Forgot Password
+            </a>
+        </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+@{
+    var totalSlides = Model.SlotsGroupedByDate.Count();
+    var startIndex = totalSlides > 1 ? totalSlides - 2 : 0; // Ensure there's at least one slide
+}
+
+<div id="slotCarousel" class="carousel slide" data-bs-interval="false">
+    <div class="carousel-inner">
+        @foreach (var group in Model.SlotsGroupedByDate.Select((value, index) => new { Value = value, Index = index }))
+        {
+                <div class="carousel-item @(group.Index == startIndex ? "active" : "")">
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                <h5>@group.Value.Key.ToString("dddd, dd MMM yyyy")</h5> <!-- Date as slide title -->
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                @* @foreach (var slot in group.Value) *@
+                                @* { *@
+               @foreach (var slot in group.Value)
+               {
+                <div class="col-md-4">
+                    <div class="card text-center mb-3">
+                        <div class="card-body">
+                            <h6>
+                                <strong>@slot.StartTime.ToString(@"hh\:mm") - @slot.EndTime.ToString(@"hh\:mm")</strong>
+                            </h6>
+                            <span class="badge @(slot.Status == "Available" ? "bg-success" : (slot.Status == "Booked" ? "bg-warning" : "bg-danger"))">
+                                                        @slot.Status
+                            </span>
+
+                                                @if (slot.Status == "Booked" && DateTime.Now > slot.Date.Add(slot.EndTime))
+                                                    {
+                                    <form asp-controller="Slot" asp-action="MarkAsCompleted" method="post">
+                                        <input type="hidden" name="slotId" value="@slot.SlotId" />
+                                        <button type="submit" class="btn btn-sm btn-primary mt-2">
+                                            Mark as Completed
+                                        </button>
+                                    </form>
+                                                    }
+                        </div>
+                    </div>
+                </div>
+                                    }
+
+                                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+
+    <!-- Carousel Controls (Manual Navigation) -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#slotCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#slotCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+   
+    <!-- Apply Leave Modal -->
+    <div class="modal fade" id="applyLeaveModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Apply for Leave</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" asp-controller="DoctorDashboard" asp-action="ApplyLeave">
+                        <div class="mb-3">
+                            <label class="form-label">Leave Date</label>
+                            <input type="date" class="form-control" name="leaveDate" required />
+                        </div>
+                        <button type="submit" class="btn btn-danger">Apply Leave</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

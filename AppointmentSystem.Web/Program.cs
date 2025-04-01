@@ -95,7 +95,7 @@ app.Use(async (context, next) =>
     {
         var currentPath = context.Request.Path.Value.ToLower();
 
-        bool isAdminArea = currentPath.StartsWith("/admin") || currentPath.StartsWith("/managedoctor");
+        bool isAdminArea = currentPath.StartsWith("/admin") || currentPath.StartsWith("/managedoctor") || currentPath.StartsWith("/account");
         bool isDoctorArea = currentPath.StartsWith("/doctor");
         bool isPatientArea = currentPath.StartsWith("/patient");
 

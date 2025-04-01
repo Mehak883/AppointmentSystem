@@ -2,6 +2,7 @@
 using AppointmentSystem.Dtos.Specialization;
 using AppointmentSystem.Handlers.Admin.Command;
 using AppointmentSystem.Handlers.Admin.Query;
+using AppointmentSystem.Handlers.DoctorSlot.Command;
 using AppointmentSystem.Handlers.Specialization.Command;
 using AppointmentSystem.Handlers.Specializations.Command;
 using AppointmentSystem.Handlers.Specializations.Query;
@@ -10,7 +11,6 @@ using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace AppointmentSystem.Web.Controllers
 {
@@ -230,6 +230,16 @@ namespace AppointmentSystem.Web.Controllers
 
             return View(specializationResponseDto);
         }
+        [HttpPost]
+        public async Task<IActionResult> GenerateTomorrowSlots()
+        {
+            var result = await _mediator.Send(new GenerateTomorrowSlotsRequest());
 
+            if (!result) TempData["Error"] = "Slots for tomorrow already exist!";
+            else TempData["Success"] = "Slots for tomorrow have been generated successfully.";
+
+            return RedirectToAction("Dashboard");
+        }
     }
 }
+

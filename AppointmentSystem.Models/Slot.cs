@@ -8,16 +8,16 @@ namespace AppointmentSystem.Models
     public class Slot
     {
         [Key]
-        public int SlotId { get; set; }  // ✅ Fixed
+        public int SlotId { get; set; }  
 
         [Required]
-        public int DoctorId { get; set; }  // ✅ Fixed
+        public int DoctorId { get; set; }  
 
         [ForeignKey("DoctorId")]
-        public Doctor? Doctor { get; set; }  // ✅ Navigation property
+        public Doctor? Doctor { get; set; }  
 
         [Required]
-        public DateTime Date { get; set; }  // ✅ Fixed property name
+        public DateTime Date { get; set; }  
 
         [Required]
         [DataType(DataType.Time)]
@@ -28,9 +28,7 @@ namespace AppointmentSystem.Models
         public TimeSpan EndTime { get; set; }
 
         [Required]
-        public SlotStatus Status { get; set; } = SlotStatus.Available;  // ✅ Fixed property
-
-        // ✅ One-to-Many: Slot can have multiple appointments
+        public SlotStatus Status { get; set; } = SlotStatus.Available;  
         public ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
 }
