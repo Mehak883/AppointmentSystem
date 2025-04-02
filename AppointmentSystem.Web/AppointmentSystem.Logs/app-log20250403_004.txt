@@ -1,0 +1,464 @@
+2025-04-03 00:43:19.897 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-03 00:43:21.260 +05:30 [INF] Executed DbCommand (87ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:43:21.345 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:43:21.356 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:43:21.365 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:43:21.384 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:43:21.429 +05:30 [INF] Admin user 'mhk@lng.com' already exists.
+2025-04-03 00:43:21.745 +05:30 [INF] Now listening on: https://localhost:7013
+2025-04-03 00:43:21.747 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-03 00:43:21.795 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-03 00:43:21.799 +05:30 [INF] Hosting environment: Development
+2025-04-03 00:43:21.803 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-04-03 00:43:22.454 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-04-03 00:43:22.636 +05:30 [INF] Accessing expired session, Key:045036a1-c053-0d6e-bb51-6fad2ff96570
+2025-04-03 00:43:22.641 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:43:22.658 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:43:22.681 +05:30 [INF] Executing ViewResult, running view Login.
+2025-04-03 00:43:22.822 +05:30 [INF] Executed ViewResult - view Login executed in 146.9979ms.
+2025-04-03 00:43:22.831 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 168.584ms
+2025-04-03 00:43:22.837 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:43:22.843 +05:30 [INF] HTTP GET / responded 200 in 254.0930 ms
+2025-04-03 00:43:22.858 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 415.5487ms
+2025-04-03 00:43:22.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:43:22.861 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:43:22.893 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 25.5404ms
+2025-04-03 00:43:22.944 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.6281ms
+2025-04-03 00:43:50.775 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/ - application/x-www-form-urlencoded 267
+2025-04-03 00:43:50.805 +05:30 [INF] Accessing expired session, Key:045036a1-c053-0d6e-bb51-6fad2ff96570
+2025-04-03 00:43:50.808 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:43:50.829 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AppointmentSystem.Dtos.Identity.LoginDto) on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:43:50.950 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:43:51.195 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-04-03 00:43:51.268 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:43:51.284 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:43:51.312 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-03 00:43:51.339 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-04-03 00:43:51.352 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:43:51.368 +05:30 [INF] Executing RedirectResult, redirecting to /Account/RedirectToDashboard.
+2025-04-03 00:43:51.373 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 535.449ms
+2025-04-03 00:43:51.375 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:43:51.382 +05:30 [INF] Session started; Key:045036a1-c053-0d6e-bb51-6fad2ff96570, Id:cbbc5100-a6a5-08b1-2702-292a40c76891
+2025-04-03 00:43:51.387 +05:30 [INF] HTTP POST / responded 302 in 589.1892 ms
+2025-04-03 00:43:51.395 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - null null
+2025-04-03 00:43:51.395 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/ - 302 0 null 620.7878ms
+2025-04-03 00:43:51.450 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:43:51.455 +05:30 [INF] Route matched with {action = "RedirectToDashboard", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RedirectToDashboard() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:43:51.461 +05:30 [INF] Executing RedirectResult, redirecting to /Admin/Dashboard.
+2025-04-03 00:43:51.464 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web) in 4.0762ms
+2025-04-03 00:43:51.467 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:43:51.470 +05:30 [INF] HTTP GET /Account/RedirectToDashboard responded 302 in 61.2664 ms
+2025-04-03 00:43:51.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - 302 0 null 78.6604ms
+2025-04-03 00:43:51.477 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-04-03 00:43:51.489 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:43:51.492 +05:30 [INF] Route matched with {action = "Dashboard", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller AppointmentSystem.Web.Controllers.AdminController (AppointmentSystem.Web).
+2025-04-03 00:43:51.497 +05:30 [INF] Executing ViewResult, running view Dashboard.
+2025-04-03 00:43:51.515 +05:30 [INF] Executed ViewResult - view Dashboard executed in 19.0483ms.
+2025-04-03 00:43:51.520 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web) in 24.8389ms
+2025-04-03 00:43:51.524 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:43:51.526 +05:30 [INF] HTTP GET /Admin/Dashboard responded 200 in 39.4870 ms
+2025-04-03 00:43:51.530 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 200 null text/html; charset=utf-8 53.387ms
+2025-04-03 00:43:51.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:43:51.536 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:43:51.547 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 11.4128ms
+2025-04-03 00:43:51.573 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.822ms
+2025-04-03 00:44:08.580 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/Admin/GenerateTomorrowSlots - application/x-www-form-urlencoded 225
+2025-04-03 00:44:08.597 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AdminController.GenerateTomorrowSlots (AppointmentSystem.Web)'
+2025-04-03 00:44:08.602 +05:30 [INF] Route matched with {action = "GenerateTomorrowSlots", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GenerateTomorrowSlots() on controller AppointmentSystem.Web.Controllers.AdminController (AppointmentSystem.Web).
+2025-04-03 00:44:08.645 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[DoctorId], [d].[EndTime], [d].[SlotDuration], [d].[StartTime], [d].[UserId]
+FROM [Doctors] AS [d]
+2025-04-03 00:44:08.715 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__doctor_DoctorId_0='?' (DbType = Int32), @__8__locals1_tomorrow_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slots] AS [s]
+        WHERE [s].[DoctorId] = @__doctor_DoctorId_0 AND [s].[Date] = @__8__locals1_tomorrow_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-04-03 00:44:08.730 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__doctor_DoctorId_0='?' (DbType = Int32), @__8__locals1_tomorrow_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Slots] AS [s]
+        WHERE [s].[DoctorId] = @__doctor_DoctorId_0 AND [s].[Date] = @__8__locals1_tomorrow_1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-04-03 00:44:08.915 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Time), @p3='?' (DbType = Time), @p4='?' (DbType = Int32), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Int32), @p7='?' (DbType = Time), @p8='?' (DbType = Time), @p9='?' (DbType = Int32), @p10='?' (DbType = DateTime2), @p11='?' (DbType = Int32), @p12='?' (DbType = Time), @p13='?' (DbType = Time), @p14='?' (DbType = Int32), @p15='?' (DbType = DateTime2), @p16='?' (DbType = Int32), @p17='?' (DbType = Time), @p18='?' (DbType = Time), @p19='?' (DbType = Int32), @p20='?' (DbType = DateTime2), @p21='?' (DbType = Int32), @p22='?' (DbType = Time), @p23='?' (DbType = Time), @p24='?' (DbType = Int32), @p25='?' (DbType = DateTime2), @p26='?' (DbType = Int32), @p27='?' (DbType = Time), @p28='?' (DbType = Time), @p29='?' (DbType = Int32), @p30='?' (DbType = DateTime2), @p31='?' (DbType = Int32), @p32='?' (DbType = Time), @p33='?' (DbType = Time), @p34='?' (DbType = Int32), @p35='?' (DbType = DateTime2), @p36='?' (DbType = Int32), @p37='?' (DbType = Time), @p38='?' (DbType = Time), @p39='?' (DbType = Int32), @p40='?' (DbType = DateTime2), @p41='?' (DbType = Int32), @p42='?' (DbType = Time), @p43='?' (DbType = Time), @p44='?' (DbType = Int32), @p45='?' (DbType = DateTime2), @p46='?' (DbType = Int32), @p47='?' (DbType = Time), @p48='?' (DbType = Time), @p49='?' (DbType = Int32), @p50='?' (DbType = DateTime2), @p51='?' (DbType = Int32), @p52='?' (DbType = Time), @p53='?' (DbType = Time), @p54='?' (DbType = Int32), @p55='?' (DbType = DateTime2), @p56='?' (DbType = Int32), @p57='?' (DbType = Time), @p58='?' (DbType = Time), @p59='?' (DbType = Int32), @p60='?' (DbType = DateTime2), @p61='?' (DbType = Int32), @p62='?' (DbType = Time), @p63='?' (DbType = Time), @p64='?' (DbType = Int32), @p65='?' (DbType = DateTime2), @p66='?' (DbType = Int32), @p67='?' (DbType = Time), @p68='?' (DbType = Time), @p69='?' (DbType = Int32), @p70='?' (DbType = DateTime2), @p71='?' (DbType = Int32), @p72='?' (DbType = Time), @p73='?' (DbType = Time), @p74='?' (DbType = Int32), @p75='?' (DbType = DateTime2), @p76='?' (DbType = Int32), @p77='?' (DbType = Time), @p78='?' (DbType = Time), @p79='?' (DbType = Int32), @p80='?' (DbType = DateTime2), @p81='?' (DbType = Int32), @p82='?' (DbType = Time), @p83='?' (DbType = Time), @p84='?' (DbType = Int32), @p85='?' (DbType = DateTime2), @p86='?' (DbType = Int32), @p87='?' (DbType = Time), @p88='?' (DbType = Time), @p89='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Slots] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4),
+(@p25, @p26, @p27, @p28, @p29, 5),
+(@p30, @p31, @p32, @p33, @p34, 6),
+(@p35, @p36, @p37, @p38, @p39, 7),
+(@p40, @p41, @p42, @p43, @p44, 8),
+(@p45, @p46, @p47, @p48, @p49, 9),
+(@p50, @p51, @p52, @p53, @p54, 10),
+(@p55, @p56, @p57, @p58, @p59, 11),
+(@p60, @p61, @p62, @p63, @p64, 12),
+(@p65, @p66, @p67, @p68, @p69, 13),
+(@p70, @p71, @p72, @p73, @p74, 14),
+(@p75, @p76, @p77, @p78, @p79, 15),
+(@p80, @p81, @p82, @p83, @p84, 16),
+(@p85, @p86, @p87, @p88, @p89, 17)) AS i ([Date], [DoctorId], [EndTime], [StartTime], [Status], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Date], [DoctorId], [EndTime], [StartTime], [Status])
+VALUES (i.[Date], i.[DoctorId], i.[EndTime], i.[StartTime], i.[Status])
+OUTPUT INSERTED.[SlotId], i._Position;
+2025-04-03 00:44:08.970 +05:30 [INF] Executing RedirectResult, redirecting to /Admin/Dashboard.
+2025-04-03 00:44:08.977 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AdminController.GenerateTomorrowSlots (AppointmentSystem.Web) in 370.303ms
+2025-04-03 00:44:08.984 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AdminController.GenerateTomorrowSlots (AppointmentSystem.Web)'
+2025-04-03 00:44:08.988 +05:30 [INF] HTTP POST /Admin/GenerateTomorrowSlots responded 302 in 394.8133 ms
+2025-04-03 00:44:08.993 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/Admin/GenerateTomorrowSlots - 302 0 null 412.9453ms
+2025-04-03 00:44:08.995 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Admin/Dashboard - null null
+2025-04-03 00:44:09.007 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:44:09.009 +05:30 [INF] Route matched with {action = "Dashboard", controller = "Admin"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Dashboard() on controller AppointmentSystem.Web.Controllers.AdminController (AppointmentSystem.Web).
+2025-04-03 00:44:09.012 +05:30 [INF] Executing ViewResult, running view Dashboard.
+2025-04-03 00:44:09.023 +05:30 [INF] Executed ViewResult - view Dashboard executed in 10.4279ms.
+2025-04-03 00:44:09.031 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web) in 19.39ms
+2025-04-03 00:44:09.034 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AdminController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:44:09.036 +05:30 [INF] HTTP GET /Admin/Dashboard responded 200 in 31.5551 ms
+2025-04-03 00:44:09.043 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:44:09.042 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:44:09.041 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Admin/Dashboard - 200 null text/html; charset=utf-8 46.1696ms
+2025-04-03 00:44:09.060 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 17.7156ms
+2025-04-03 00:44:09.081 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 37.4224ms
+2025-04-03 00:44:14.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Logout - null null
+2025-04-03 00:44:14.848 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web)'
+2025-04-03 00:44:14.860 +05:30 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:44:14.869 +05:30 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-04-03 00:44:14.873 +05:30 [INF] AuthenticationScheme: Identity.External signed out.
+2025-04-03 00:44:14.875 +05:30 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-04-03 00:44:14.876 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2025-04-03 00:44:14.878 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web) in 12.5699ms
+2025-04-03 00:44:14.880 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web)'
+2025-04-03 00:44:14.882 +05:30 [INF] HTTP GET /Account/Logout responded 302 in 41.0174 ms
+2025-04-03 00:44:14.887 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Logout - 302 0 null 56.8436ms
+2025-04-03 00:44:14.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-04-03 00:44:14.898 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:44:14.900 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:44:14.905 +05:30 [INF] Executing ViewResult, running view Login.
+2025-04-03 00:44:14.910 +05:30 [INF] Executed ViewResult - view Login executed in 5.5272ms.
+2025-04-03 00:44:14.914 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 9.7182ms
+2025-04-03 00:44:14.919 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:44:14.922 +05:30 [INF] HTTP GET / responded 200 in 23.8923 ms
+2025-04-03 00:44:14.926 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 36.0199ms
+2025-04-03 00:44:14.930 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:44:14.930 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:44:14.947 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 17.5945ms
+2025-04-03 00:44:14.953 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.3579ms
+2025-04-03 00:44:23.571 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/ - application/x-www-form-urlencoded 236
+2025-04-03 00:44:23.584 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:44:23.590 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AppointmentSystem.Dtos.Identity.LoginDto) on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:44:23.601 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:44:23.685 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-04-03 00:44:23.694 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:44:23.703 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:44:23.717 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-03 00:44:23.721 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-04-03 00:44:23.724 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:44:23.728 +05:30 [INF] Executing RedirectResult, redirecting to /Account/RedirectToDashboard.
+2025-04-03 00:44:23.730 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 137.6271ms
+2025-04-03 00:44:23.733 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:44:23.735 +05:30 [INF] HTTP POST / responded 302 in 151.7884 ms
+2025-04-03 00:44:23.738 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/ - 302 0 null 167.7382ms
+2025-04-03 00:44:23.741 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - null null
+2025-04-03 00:44:23.751 +05:30 [INF] HTTP GET /Account/RedirectToDashboard responded 302 in 0.7381 ms
+2025-04-03 00:44:23.755 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - 302 0 null 14.7446ms
+2025-04-03 00:44:23.758 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Doctor/Dashboard - null null
+2025-04-03 00:44:23.772 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:44:23.776 +05:30 [INF] Route matched with {action = "Dashboard", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Dashboard() on controller AppointmentSystem.Web.Controllers.DoctorController (AppointmentSystem.Web).
+2025-04-03 00:44:23.896 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__request_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DoctorId], [t].[EndTime], [t].[SlotDuration], [t].[StartTime], [t].[UserId], [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FullName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[DoctorId], [t0].[SpecializationId], [t0].[DoctorSpecializationId], [t0].[SpecializationId0], [t0].[SpecializationName]
+FROM (
+    SELECT TOP(1) [d].[DoctorId], [d].[EndTime], [d].[SlotDuration], [d].[StartTime], [d].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Doctors] AS [d]
+    INNER JOIN [AspNetUsers] AS [a] ON [d].[UserId] = [a].[Id]
+    WHERE [d].[UserId] = @__request_UserId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [d0].[DoctorId], [d0].[SpecializationId], [d0].[DoctorSpecializationId], [s].[SpecializationId] AS [SpecializationId0], [s].[SpecializationName]
+    FROM [DoctorSpecializations] AS [d0]
+    INNER JOIN [Specializations] AS [s] ON [d0].[SpecializationId] = [s].[SpecializationId]
+) AS [t0] ON [t].[DoctorId] = [t0].[DoctorId]
+ORDER BY [t].[DoctorId], [t].[Id], [t0].[DoctorId], [t0].[SpecializationId]
+2025-04-03 00:44:23.999 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__request_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlotId], [s].[Date], [s].[StartTime], [s].[EndTime], [s].[Status]
+FROM [Slots] AS [s]
+WHERE [s].[DoctorId] = @__request_DoctorId_0
+ORDER BY [s].[Date], [s].[StartTime]
+2025-04-03 00:44:24.013 +05:30 [INF] Executing ViewResult, running view Dashboard.
+2025-04-03 00:44:24.038 +05:30 [INF] Executed ViewResult - view Dashboard executed in 26.123ms.
+2025-04-03 00:44:24.042 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web) in 262.0332ms
+2025-04-03 00:44:24.045 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:44:24.048 +05:30 [INF] HTTP GET /Doctor/Dashboard responded 200 in 279.9104 ms
+2025-04-03 00:44:24.052 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Doctor/Dashboard - 200 null text/html; charset=utf-8 294.4873ms
+2025-04-03 00:44:24.058 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:44:24.058 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:44:24.071 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 12.7689ms
+2025-04-03 00:44:24.077 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.7792ms
+2025-04-03 00:45:37.708 +05:30 [INF] User profile is available. Using 'C:\Users\lng86\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-03 00:45:39.020 +05:30 [INF] Executed DbCommand (54ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:45:39.083 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:45:39.100 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:45:39.105 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:45:39.119 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:45:39.156 +05:30 [INF] Admin user 'mhk@lng.com' already exists.
+2025-04-03 00:45:39.415 +05:30 [INF] Now listening on: https://localhost:7013
+2025-04-03 00:45:39.418 +05:30 [INF] Now listening on: http://localhost:5085
+2025-04-03 00:45:39.478 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-03 00:45:39.482 +05:30 [INF] Hosting environment: Development
+2025-04-03 00:45:39.486 +05:30 [INF] Content root path: C:\AppointmentSystem\AppointmentSystem.Web
+2025-04-03 00:45:39.890 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-04-03 00:45:40.069 +05:30 [INF] Accessing expired session, Key:045036a1-c053-0d6e-bb51-6fad2ff96570
+2025-04-03 00:45:40.074 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:45:40.089 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:45:40.104 +05:30 [INF] Executing ViewResult, running view Login.
+2025-04-03 00:45:40.227 +05:30 [INF] Executed ViewResult - view Login executed in 121.9437ms.
+2025-04-03 00:45:40.238 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 143.9363ms
+2025-04-03 00:45:40.244 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:45:40.254 +05:30 [INF] HTTP GET / responded 200 in 239.0403 ms
+2025-04-03 00:45:40.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 399.1684ms
+2025-04-03 00:45:40.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:45:40.283 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:45:40.309 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 27.5653ms
+2025-04-03 00:45:40.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 79.5547ms
+2025-04-03 00:46:05.505 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/ - application/x-www-form-urlencoded 272
+2025-04-03 00:46:05.524 +05:30 [INF] Accessing expired session, Key:045036a1-c053-0d6e-bb51-6fad2ff96570
+2025-04-03 00:46:05.526 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:46:05.546 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AppointmentSystem.Dtos.Identity.LoginDto) on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:46:05.661 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:46:05.885 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-04-03 00:46:05.927 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:46:05.941 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:46:05.958 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-03 00:46:05.973 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-04-03 00:46:05.985 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:46:05.996 +05:30 [INF] Executing RedirectResult, redirecting to /Account/RedirectToDashboard.
+2025-04-03 00:46:06.000 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 445.4851ms
+2025-04-03 00:46:06.003 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:46:06.008 +05:30 [INF] Session started; Key:045036a1-c053-0d6e-bb51-6fad2ff96570, Id:6eb6dc61-ce36-faa3-d80f-460a4c5a50f5
+2025-04-03 00:46:06.011 +05:30 [INF] HTTP POST / responded 302 in 489.9355 ms
+2025-04-03 00:46:06.022 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - null null
+2025-04-03 00:46:06.022 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/ - 302 0 null 517.4946ms
+2025-04-03 00:46:06.060 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:46:06.069 +05:30 [INF] Route matched with {action = "RedirectToDashboard", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RedirectToDashboard() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:46:06.078 +05:30 [INF] Executing RedirectResult, redirecting to /Doctor/Dashboard.
+2025-04-03 00:46:06.081 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web) in 3.6052ms
+2025-04-03 00:46:06.084 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:46:06.087 +05:30 [INF] HTTP GET /Account/RedirectToDashboard responded 302 in 47.8908 ms
+2025-04-03 00:46:06.092 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - 302 0 null 70.6421ms
+2025-04-03 00:46:06.095 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Doctor/Dashboard - null null
+2025-04-03 00:46:06.109 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:46:06.115 +05:30 [INF] Route matched with {action = "Dashboard", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Dashboard() on controller AppointmentSystem.Web.Controllers.DoctorController (AppointmentSystem.Web).
+2025-04-03 00:46:06.253 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@__request_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[DoctorId], [t].[EndTime], [t].[SlotDuration], [t].[StartTime], [t].[UserId], [t].[Id], [t].[AccessFailedCount], [t].[ConcurrencyStamp], [t].[Email], [t].[EmailConfirmed], [t].[FullName], [t].[LockoutEnabled], [t].[LockoutEnd], [t].[NormalizedEmail], [t].[NormalizedUserName], [t].[PasswordHash], [t].[PhoneNumber], [t].[PhoneNumberConfirmed], [t].[SecurityStamp], [t].[TwoFactorEnabled], [t].[UserName], [t0].[DoctorId], [t0].[SpecializationId], [t0].[DoctorSpecializationId], [t0].[SpecializationId0], [t0].[SpecializationName]
+FROM (
+    SELECT TOP(1) [d].[DoctorId], [d].[EndTime], [d].[SlotDuration], [d].[StartTime], [d].[UserId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [Doctors] AS [d]
+    INNER JOIN [AspNetUsers] AS [a] ON [d].[UserId] = [a].[Id]
+    WHERE [d].[UserId] = @__request_UserId_0
+) AS [t]
+LEFT JOIN (
+    SELECT [d0].[DoctorId], [d0].[SpecializationId], [d0].[DoctorSpecializationId], [s].[SpecializationId] AS [SpecializationId0], [s].[SpecializationName]
+    FROM [DoctorSpecializations] AS [d0]
+    INNER JOIN [Specializations] AS [s] ON [d0].[SpecializationId] = [s].[SpecializationId]
+) AS [t0] ON [t].[DoctorId] = [t0].[DoctorId]
+ORDER BY [t].[DoctorId], [t].[Id], [t0].[DoctorId], [t0].[SpecializationId]
+2025-04-03 00:46:06.370 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__request_DoctorId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SlotId], [s].[Date], [s].[StartTime], [s].[EndTime], [s].[Status]
+FROM [Slots] AS [s]
+WHERE [s].[DoctorId] = @__request_DoctorId_0
+ORDER BY [s].[Date], [s].[StartTime]
+2025-04-03 00:46:06.394 +05:30 [INF] Executing ViewResult, running view Dashboard.
+2025-04-03 00:46:06.438 +05:30 [INF] Executed ViewResult - view Dashboard executed in 46.4297ms.
+2025-04-03 00:46:06.443 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web) in 324.2063ms
+2025-04-03 00:46:06.450 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.DoctorController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:46:06.453 +05:30 [INF] HTTP GET /Doctor/Dashboard responded 200 in 349.2188 ms
+2025-04-03 00:46:06.460 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Doctor/Dashboard - 200 null text/html; charset=utf-8 364.9859ms
+2025-04-03 00:46:06.486 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:46:06.486 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:46:06.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 103.3923ms
+2025-04-03 00:46:06.607 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 121.5993ms
+2025-04-03 00:46:56.350 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/Logout - null null
+2025-04-03 00:46:56.375 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web)'
+2025-04-03 00:46:56.379 +05:30 [INF] Route matched with {action = "Logout", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:46:56.388 +05:30 [INF] AuthenticationScheme: Identity.Application signed out.
+2025-04-03 00:46:56.390 +05:30 [INF] AuthenticationScheme: Identity.External signed out.
+2025-04-03 00:46:56.392 +05:30 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2025-04-03 00:46:56.395 +05:30 [INF] Executing RedirectResult, redirecting to /.
+2025-04-03 00:46:56.396 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web) in 13.7831ms
+2025-04-03 00:46:56.399 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Logout (AppointmentSystem.Web)'
+2025-04-03 00:46:56.402 +05:30 [INF] HTTP GET /Account/Logout responded 302 in 37.6973 ms
+2025-04-03 00:46:56.406 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/Logout - 302 0 null 56.8452ms
+2025-04-03 00:46:56.409 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/ - null null
+2025-04-03 00:46:56.417 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:46:56.420 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:46:56.423 +05:30 [INF] Executing ViewResult, running view Login.
+2025-04-03 00:46:56.429 +05:30 [INF] Executed ViewResult - view Login executed in 5.9204ms.
+2025-04-03 00:46:56.441 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 19.2199ms
+2025-04-03 00:46:56.444 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:46:56.447 +05:30 [INF] HTTP GET / responded 200 in 30.8614 ms
+2025-04-03 00:46:56.447 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:46:56.448 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:46:56.456 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/ - 200 null text/html; charset=utf-8 47.3267ms
+2025-04-03 00:46:56.464 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 16.4696ms
+2025-04-03 00:46:56.494 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 46.6444ms
+2025-04-03 00:47:08.015 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7013/ - application/x-www-form-urlencoded 234
+2025-04-03 00:47:08.027 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:47:08.031 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AppointmentSystem.Dtos.Identity.LoginDto) on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:47:08.042 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-04-03 00:47:08.138 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2025-04-03 00:47:08.152 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:47:08.162 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-04-03 00:47:08.169 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2025-04-03 00:47:08.174 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2025-04-03 00:47:08.179 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-04-03 00:47:08.183 +05:30 [INF] Executing RedirectResult, redirecting to /Account/RedirectToDashboard.
+2025-04-03 00:47:08.185 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web) in 149.561ms
+2025-04-03 00:47:08.187 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.Login (AppointmentSystem.Web)'
+2025-04-03 00:47:08.189 +05:30 [INF] HTTP POST / responded 302 in 162.9390 ms
+2025-04-03 00:47:08.193 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7013/ - 302 0 null 178.281ms
+2025-04-03 00:47:08.197 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - null null
+2025-04-03 00:47:08.205 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:47:08.209 +05:30 [INF] Route matched with {action = "RedirectToDashboard", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RedirectToDashboard() on controller AppointmentSystem.Web.Controllers.AccountController (AppointmentSystem.Web).
+2025-04-03 00:47:08.213 +05:30 [INF] Executing RedirectResult, redirecting to /Patient/Dashboard.
+2025-04-03 00:47:08.215 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web) in 2.0888ms
+2025-04-03 00:47:08.217 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.AccountController.RedirectToDashboard (AppointmentSystem.Web)'
+2025-04-03 00:47:08.219 +05:30 [INF] HTTP GET /Account/RedirectToDashboard responded 302 in 14.3983 ms
+2025-04-03 00:47:08.221 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Account/RedirectToDashboard - 302 0 null 25.1609ms
+2025-04-03 00:47:08.225 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/Patient/Dashboard - null null
+2025-04-03 00:47:08.235 +05:30 [INF] Executing endpoint 'AppointmentSystem.Web.Controllers.PatientController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:47:08.242 +05:30 [INF] Route matched with {action = "Dashboard", controller = "Patient"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Dashboard() on controller AppointmentSystem.Web.Controllers.PatientController (AppointmentSystem.Web).
+2025-04-03 00:47:08.268 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__request_UserId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[PatientId], [p].[Gender], [p].[UserId]
+FROM [Patients] AS [p]
+WHERE [p].[UserId] = @__request_UserId_0
+2025-04-03 00:47:08.317 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [s].[SpecializationId], [s].[SpecializationName]
+FROM [Specializations] AS [s]
+2025-04-03 00:47:08.349 +05:30 [INF] Executing ViewResult, running view Dashboard.
+2025-04-03 00:47:08.400 +05:30 [INF] Executed ViewResult - view Dashboard executed in 51.5634ms.
+2025-04-03 00:47:08.406 +05:30 [INF] Executed action AppointmentSystem.Web.Controllers.PatientController.Dashboard (AppointmentSystem.Web) in 160.1529ms
+2025-04-03 00:47:08.409 +05:30 [INF] Executed endpoint 'AppointmentSystem.Web.Controllers.PatientController.Dashboard (AppointmentSystem.Web)'
+2025-04-03 00:47:08.411 +05:30 [INF] HTTP GET /Patient/Dashboard responded 200 in 176.8500 ms
+2025-04-03 00:47:08.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/Patient/Dashboard - 200 null text/html; charset=utf-8 190.5318ms
+2025-04-03 00:47:08.417 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_vs/browserLink - null null
+2025-04-03 00:47:08.419 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-03 00:47:08.435 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_framework/aspnetcore-browser-refresh.js - 200 16527 application/javascript; charset=utf-8 16.0154ms
+2025-04-03 00:47:08.445 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7013/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.0983ms

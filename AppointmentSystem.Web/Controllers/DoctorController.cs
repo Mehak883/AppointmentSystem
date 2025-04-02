@@ -14,34 +14,28 @@ namespace AppointmentSystem.Web.Controllers
     public class DoctorController : Controller
     {
         private readonly IMediator _mediator;
-        private readonly UserManager<ApplicationUser> _userManager;
        
 
         public DoctorController(IMediator mediator, UserManager<ApplicationUser> userManager)
         {
             _mediator = mediator;
-            _userManager = userManager;
         }
 
         public async Task<IActionResult> Dashboard()
         {
-
-
             var session = HttpContext.Session;
-            string userId = session.GetString("UserId");
-            string role = session.GetString("Role");
-            string fullname = session.GetString("FullName");
-
-            string email = session.GetString("UserEmail");
+            string userId = session.GetString("UserId")!;
+            string role = session.GetString("Role")!;
+            string fullname = session.GetString("FullName")!;
+            string email = session.GetString("UserEmail")!;
             var doctor = await _mediator.Send(new GetDoctorByUserIdQuery(userId)); 
             var slots = await _mediator.Send(new GetDoctorSlotsQuery(doctor.DoctorId, DateTime.Today));
             var groupedSlots = slots
-     .GroupBy(s => s.Date.Date)  // Group by date
-     .OrderBy(g => g.Key)  // Sort by date
-     .ToList();
+                .GroupBy(s => s.Date.Date)  
+                .OrderBy(g => g.Key)  
+                .ToList();
             var viewModel = new DoctorDashboardDto
             {
-
                 DoctorId = doctor.DoctorId,
                 Specializations = doctor.Specializations,
                 UserId = userId, 

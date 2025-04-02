@@ -94,8 +94,8 @@ namespace AppointmentSystem.Web.Controllers
             }
             else if (userRole == "Patient")
             {
-                if (!currentPath.StartsWith("/patient/profile"))
-                    return RedirectToAction("Profile", "Patient");
+                if (!currentPath.StartsWith("/patient/dashboard"))
+                    return RedirectToAction("Dashboard", "Patient");
             }
             else
             {

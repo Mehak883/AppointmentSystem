@@ -1,0 +1,86 @@
+﻿@model AppointmentSystem.Dtos.Patient.PatientDashboardDto
+
+<nav class="navbar navbar-expand-lg nav-bg-color shadow-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">Patient Dashboard</a>
+
+        <button class="navbar-toggler nav-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="bi bi-list text-white"></i> 
+        </button> 
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto"></ul>
+
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
+                    <div class="icon-circle bg-white text-dark me-2">
+                        <i class="bi bi-person-fill"></i>  
+                    </div>
+                    <span class="fw-bold">@Model.FullName</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="profileDropdown">
+                    <li class="dropdown-item text-center">
+                        <strong>@Model.FullName</strong> 
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <small class="text-muted">@Model.Email</small>
+                    </li>
+                    <li class="dropdown-item text-center">
+                        <span class="badge bg-primary">@Model.Role</span>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                            <i class="bi bi-key-fill"></i> Forgot Password
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="main-color fw-bold">Welcome to Your Dashboard</h2>
+
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body text-center">
+                    <i class="bi bi-calendar-check main-color display-6"></i>
+                    <h5 class="card-title mt-2">My Appointments</h5>
+                    <p class="card-text text-muted">View and manage your upcoming appointments.</p>
+                    <a asp-action="Appointment" asp-controller="Patient" class="btn btn-color w-100">
+                        <i class="bi bi-eye"></i> View Appointments
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0 rounded">
+                <div class="card-body">
+                    <h5 class="text-dark fw-bold">To whom do you want to consult?</h5>
+                    <ul class="list-group mt-3">
+                        @foreach (var specialization in ViewBag.Specializations)
+                        {
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <span class="fw-semibold">@specialization.SpecializationName</span>
+                                    <a asp-action="DoctorsBySpecialization" asp-controller="Patient" asp-route-specializationId="@specialization.SpecializationId" 
+                                       class="btn btn-outline-color btn-sm">
+                                        <i class="bi bi-arrow-right-circle"></i> View Doctors
+                                    </a>
+                                </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

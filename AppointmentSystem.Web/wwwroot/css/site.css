@@ -33,6 +33,20 @@ body {
         color: white !important;
         background-color: #30505e !important;
     }
+
+.btn-outline-color {
+    border-color: #30505e !important;
+    background-color: white !important;
+
+    color: #30505e !important;
+}
+
+    .btn-outline-color:hover {
+        border-color: #30505e !important;
+        background-color: #d6eaec !important;
+        color: #30505e !important;
+    }
+
 .nav-bg-color {
     background-color: #30505e !important;
 }
@@ -48,6 +62,9 @@ body {
 
 .main-bg-color {
     background-color: #30505e !important;
+}
+.card-bg-color {
+    background-color: #d6f1ef !important;
 }
 .svg-color {
     fill: #30505e !important;

@@ -7,7 +7,7 @@
   
 
         <button class="navbar-toggler nav-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-    <i class="bi bi-list"></i> <!-- Bootstrap menu icon -->
+    <i class="bi bi-list"></i> 
 </button>
 
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,31 +29,34 @@
                 </li>
             </ul>
 
-            <div class="dropdown">
+           <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
-                    <div class="icon-circle">
+                    <div class="icon-circle bg-white text-dark me-2">
                         <i class="bi bi-person-fill"></i>  
                     </div>
+                    <span class="fw-bold">@Model.Fullname</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="profileDropdown">
+                <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="profileDropdown">
                     <li class="dropdown-item text-center">
                         <strong>@Model.Fullname</strong> 
                     </li>
                     <li class="dropdown-item text-center">
-                        <small>@Model.Email</small>
+                        <small class="text-muted">@Model.Email</small>
                     </li>
                     <li class="dropdown-item text-center">
                         <span class="badge bg-primary">@Model.Role</span>
                     </li>
-
-                      <li>
-            <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
-                Forgot Password
-            </a>
-        </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">Logout</a>
+                        <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                            <i class="bi bi-key-fill"></i> Forgot Password
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
                     </li>
                 </ul>
             </div>

@@ -1,8 +1,7 @@
 ﻿@model AppointmentSystem.Dtos.Doctor.DoctorDashboardDto
-
 <nav class="navbar navbar-expand-lg  nav-bg-color">
     <div class="container-fluid">
-        <a class="navbar-brand  text-white" href="#">Admin Dashboard</a>
+        <a class="navbar-brand  text-white" href="#">Doctor Dashboard</a>
 
 
         <button class="navbar-toggler nav-color" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -18,31 +17,35 @@
                 </li>
             </ul>
 
+       
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
-                    <div class="icon-circle">
+                    <div class="icon-circle bg-white text-dark me-2">
                         <i class="bi bi-person-fill"></i>  
                     </div>
+                    <span class="fw-bold">@Model.Fullname</span>
                 </a>
-                <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="profileDropdown">
+                <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="profileDropdown">
                     <li class="dropdown-item text-center">
                         <strong>@Model.Fullname</strong> 
                     </li>
                     <li class="dropdown-item text-center">
-                        <small>@Model.Email</small>
+                        <small class="text-muted">@Model.Email</small>
                     </li>
                     <li class="dropdown-item text-center">
-                        <span class="badge main-bg-color">@Model.Role</span>
+                        <span class="badge bg-primary">@Model.Role</span>
                     </li>
-
-                      <li>
-            <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
-                Forgot Password
-            </a>
-        </li>
                     <li><hr class="dropdown-divider"></li>
                     <li>
-                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">Logout</a>
+                        <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
+                            <i class="bi bi-key-fill"></i> Forgot Password
+                        </a>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li>
+                        <a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -70,28 +73,41 @@
                                 @* { *@
                @foreach (var slot in group.Value)
                {
-                <div class="col-md-4">
-                    <div class="card text-center mb-3">
-                        <div class="card-body">
-                            <h6>
-                                <strong>@slot.StartTime.ToString(@"hh\:mm") - @slot.EndTime.ToString(@"hh\:mm")</strong>
-                            </h6>
-                            <span class="badge @(slot.Status == "Available" ? "bg-success" : (slot.Status == "Booked" ? "bg-warning" : "bg-danger"))">
-                                                        @slot.Status
-                            </span>
+        <div class="col-md-4">
+            <div class="card text-center mb-3">
+                <div class="card-body">
+                    <h6>
+                        <strong>@slot.StartTime.ToString(@"hh\:mm") - @slot.EndTime.ToString(@"hh\:mm")</strong>
+                    </h6>
 
-                                                @if (slot.Status == "Booked" && DateTime.Now > slot.Date.Add(slot.EndTime))
+                                                @* Handle status display properly *@
+                                                @if (slot.Status == SlotStatus.Available.ToString())
+                                                {
+                                                    @if (DateTime.Now > slot.Date.Add(slot.EndTime))
                                                     {
-                                    <form asp-controller="Slot" asp-action="MarkAsCompleted" method="post">
-                                        <input type="hidden" name="slotId" value="@slot.SlotId" />
-                                        <button type="submit" class="btn btn-sm btn-primary mt-2">
-                                            Mark as Completed
-                                        </button>
-                                    </form>
+                                    <div class="mt-2 text-danger fw-bold">Not Booked</div>  @* Available but time passed *@
                                                     }
-                        </div>
-                    </div>
+                                                    else
+                                                    {
+                                    <span class="badge bg-success">Available</span>  @* Normal Available status *@
+                                                    }
+                                                }
+                                                else if (slot.Status == SlotStatus.Booked.ToString())
+                                                {
+                            <span class="badge bg-warning text-dark">Booked</span>
+                                                }
+                                                else if (slot.Status == SlotStatus.Completed.ToString())
+                                                {
+                            <span class="badge bg-secondary">Completed</span>
+                                                }
+                                                else if (slot.Status == SlotStatus.Cancelled.ToString())
+                                                {
+                            <span class="badge bg-danger">Cancelled</span>
+                                                }
                 </div>
+            </div>
+        </div>
+
                                     }
 
                                           

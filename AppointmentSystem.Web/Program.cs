@@ -96,8 +96,8 @@ app.Use(async (context, next) =>
         var currentPath = context.Request.Path.Value.ToLower();
 
         bool isAdminArea = currentPath.StartsWith("/admin") || currentPath.StartsWith("/managedoctor") || currentPath.StartsWith("/account");
-        bool isDoctorArea = currentPath.StartsWith("/doctor");
-        bool isPatientArea = currentPath.StartsWith("/patient");
+        bool isDoctorArea = currentPath.StartsWith("/doctor")|| currentPath.StartsWith("/account");
+        bool isPatientArea = currentPath.StartsWith("/patient")||currentPath.StartsWith("/account");
 
         if ((sessionUser == "SuperAdmin" || sessionUser == "Admin") && !isAdminArea)
         {
@@ -111,7 +111,7 @@ app.Use(async (context, next) =>
         }
         if (sessionUser == "Patient" && !isPatientArea)
         {
-            context.Response.Redirect("/Patient/Profile");
+            context.Response.Redirect("/Patient/Dashboard");
             return;
         }
     }

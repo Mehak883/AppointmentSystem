@@ -1,0 +1,51 @@
+﻿@model List<AppointmentSystem.Dtos.Doctor.DoctorResponseDto>
+@{
+    ViewData["Title"] = "Doctors List";
+}
+
+<div class="container mt-5">
+    <h2 class="main-color fw-bold mb-4">
+        <i class="bi bi-person-lines-fill"></i> Available Doctors
+    </h2>
+
+    <div class="row">
+        @foreach (var doctor in Model)
+        {
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card shadow-lg border-0 rounded">
+                        <div class="card-body text-center">
+                            <!-- Doctor Name -->
+                            <h5 class="card-title fw-bold text-dark">
+                                <i class="bi bi-person-circle"></i> @doctor.FullName
+                            </h5>
+
+                            <!-- Shift Timing -->
+                            <p class="text-muted mt-2">
+                                <i class="bi bi-clock main-color"></i> 
+                                <strong>Shift:</strong> 
+                            @doctor.StartTime.ToString(@"hh\:mm") - 
+                            @doctor.EndTime.ToString(@"hh\:mm")
+                            </p>
+
+                            <!-- Specializations -->
+                            <p class="fw-bold"><i class="bi bi-clipboard-pulse text-success"></i> Specializations:</p>
+                            <div class="d-flex flex-wrap justify-content-center">
+                            @foreach (var spec in doctor.Specializations)
+                            {
+                                        <span class="badge bg-info text-white me-1 mb-1">@spec.SpecializationName</span>
+                            }
+                            </div>
+
+                            <!-- View Slots Button -->
+                            <a asp-action="Slots" asp-controller="Patient"
+                               asp-route-doctorId="@doctor.DoctorId"
+                                       asp-route-specializationId="@ViewBag.SpecializationId"
+                               class="btn btn-outline-color mt-3 w-100">
+                                <i class="bi bi-calendar-check"></i> View Slots
+                            </a>
+                        </div>
+                    </div>
+                </div>
+        }
+    </div>
+</div>
