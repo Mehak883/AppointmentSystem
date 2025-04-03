@@ -7,8 +7,12 @@
 
 
 <div class="container mt-4">
-
+     <div class="d-flex align-items-center gap-3 mb-3">
+    <a class="main-color" asp-controller="Admin" asp-action="ManageSpecialization">
+        <i class="bi bi-box-arrow-left"></i> Back
+    </a>
     <h2 class="main-color">Add new specialization</h2>
+    </div>
     <form asp-controller="Admin" asp-action="AddSpecialization" method="post">
         <div class="mb-3">
             <label asp-for="SpecializationName"  class="form-label"></label>

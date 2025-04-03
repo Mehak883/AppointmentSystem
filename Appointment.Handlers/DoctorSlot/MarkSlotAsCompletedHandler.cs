@@ -2,6 +2,7 @@
 using AppointmentSystem.Handlers.DoctorSlot.Command;
 using AppointmentSystem.Models;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 
 namespace AppointmentSystem.Handlers.DoctorSlot
@@ -23,8 +24,18 @@ namespace AppointmentSystem.Handlers.DoctorSlot
 
             slot.Status = SlotStatus.Completed;
             _context.Slots.Update(slot);
-            await _context.SaveChangesAsync(cancellationToken);
 
+            var appointment = await _context.Appointments
+                .FirstOrDefaultAsync(a => a.SlotId == request.SlotId, cancellationToken);
+
+            if (appointment != null)
+            {
+                appointment.Status = SlotStatus.Completed;
+                _context.Appointments.Update(appointment);
+            }
+
+            // Save changes
+            await _context.SaveChangesAsync(cancellationToken);
             return true;
         }
     }

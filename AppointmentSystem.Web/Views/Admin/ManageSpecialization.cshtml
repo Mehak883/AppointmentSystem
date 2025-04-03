@@ -3,9 +3,16 @@
 
 <div class="container mt-3">
     <div class="d-flex justify-content-between align-items-center">
-        <h2 class="main-color">Admin Management</h2>
-        <a href="@Url.Action("AddSpecialization", "Admin")" class="btn btn-color">Add Specialization</a>
-    </div>
+    <a class="main-color" asp-controller="Admin" asp-action="Dashboard">
+        <i class="bi bi-box-arrow-left"></i> Back
+    </a>
+
+    <h2 class="main-color text-center flex-grow-1"> Admin Management</h2>
+
+    <a href="@Url.Action("AddSpecialization", "Admin")" class="btn btn-color">Add Specialization</a>
+</div>
+
+   
 
     <table class="table table-bordered mt-3">
         <thead >
@@ -17,9 +24,7 @@
            
             </tr>
         </thead>
-        @* @{ *@
-        @*     int count = 1; *@
-        @* }  *@
+
 
         <tbody>
             @foreach (var admin in Model)
@@ -39,6 +44,8 @@
     </table>
 </div>
 <script>
+    
+    // Replace the previous history entry (Create Doctor page) with Admin Dashboard
     function confirmDelete(userId) {
         Swal.fire({
             title: "Are you sure?",
@@ -54,5 +61,7 @@
                 window.location.href = "/Admin/DeleteSpecialization?id=" + userId;
             }
         });
+
     }
+
 </script>

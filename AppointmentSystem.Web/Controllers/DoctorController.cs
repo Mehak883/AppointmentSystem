@@ -49,7 +49,7 @@ namespace AppointmentSystem.Web.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> MarkAsCompleted(int slotId)
+        public async Task<IActionResult> MarkSlotAsCompleted(int slotId)
         {
             var result = await _mediator.Send(new MarkSlotAsCompletedRequest(slotId));
 

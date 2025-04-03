@@ -4,11 +4,13 @@ using AppointmentSystem.Handlers.Doctor.Command;
 using AppointmentSystem.Handlers.Doctor.Query;
 using AppointmentSystem.Handlers.Specializations.Query;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
 namespace AppointmentSystem.Web.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
 
     public class ManageDoctorController : Controller
     {

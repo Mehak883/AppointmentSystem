@@ -8,12 +8,17 @@ using AppointmentSystem.Handlers.Specializations.Command;
 using AppointmentSystem.Handlers.Specializations.Query;
 using AppointmentSystem.Models;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 
+
+
 namespace AppointmentSystem.Web.Controllers
 {
+    [Authorize(Roles = "Admin,SuperAdmin")]
+
     public class AdminController : Controller
     {
         private readonly IMediator _mediator;
@@ -165,6 +170,7 @@ namespace AppointmentSystem.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> AddSpecialization(SpecializationRequestDto specializationRequestDto)
         {
+       
             if (!ModelState.IsValid)
             {
                 return View(specializationRequestDto);

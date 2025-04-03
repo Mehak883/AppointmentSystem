@@ -15,25 +15,26 @@
                 @if (Model.Role == "SuperAdmin")
                 {
                         <li class="nav-item">
-                            <a class="nav-link nav-color" asp-controller="Admin" asp-action="GetAllAdmin">Manage Admins</a>
+                                <a class="nav-link nav-color" asp-controller="Admin" asp-action="GetAllAdmin"> <i class="bi bi-people-fill me-1"></i>Manage Admins</a>
                         </li>
                 }
                 <li class="nav-item">
-                    <a class="nav-link nav-color" asp-controller="ManageDoctor" asp-action="ViewAll">Manage Doctors</a>
+                    <a class="nav-link nav-color" asp-controller="ManageDoctor" asp-action="ViewAll"> <i class="bi bi-heart-pulse-fill me-1"></i>Manage Doctors</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ManageSpecialization">Manage Specialization</a>
+                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ManageSpecialization"> <i class="bi bi-tags-fill me-1"></i>Manage Specialization</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ViewDoctorLeaves">Doctor Leaves</a>
+                    <a class="nav-link nav-color" asp-controller="Admin" asp-action="ViewDoctorLeaves" > <i class="bi bi-calendar-x-fill me-1"></i>Doctor Leaves</a>
                 </li>
             </ul>
 
            <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
-                    <div class="icon-circle bg-white text-dark me-2">
+                     <div class="icon-circle bg-light main-color me-2 d-flex align-items-center justify-content-center" style="width: 23px; height: 23px;">
                         <i class="bi bi-person-fill"></i>  
                     </div>
+                   
                     <span class="fw-bold">@Model.Fullname</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end shadow-lg" aria-labelledby="profileDropdown">
@@ -63,6 +64,20 @@
         </div>
     </div>
 </nav>
-<form method="post" asp-controller="Admin" asp-action="GenerateTomorrowSlots">
-    <button type="submit" class="btn btn-primary">Generate Tomorrow's Slots</button>
-</form>
+<div class="container mt-5 pt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card  shadow-lg">
+                <div class="card-body  text-center">
+                    <h5 class="card-title">Generate Tomorrow's Slots</h5>
+                    <form method="post" asp-controller="Admin" asp-action="GenerateTomorrowSlots">
+                        <button type="submit" class="btn btn-color mt-3">
+                            <i class="bi bi-calendar-check"></i> Generate Slots
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

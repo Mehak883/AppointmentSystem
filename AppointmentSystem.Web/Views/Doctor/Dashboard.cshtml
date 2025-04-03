@@ -20,7 +20,7 @@
        
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="profileDropdown" data-bs-toggle="dropdown">
-                    <div class="icon-circle bg-white text-dark me-2">
+                      <div class="icon-circle bg-light main-color me-2 d-flex align-items-center justify-content-center" style="width: 23px; height: 23px;">
                         <i class="bi bi-person-fill"></i>  
                     </div>
                     <span class="fw-bold">@Model.Fullname</span>
@@ -71,44 +71,51 @@
                                 <div class="row">
                                 @* @foreach (var slot in group.Value) *@
                                 @* { *@
-               @foreach (var slot in group.Value)
-               {
-        <div class="col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-body">
-                    <h6>
-                        <strong>@slot.StartTime.ToString(@"hh\:mm") - @slot.EndTime.ToString(@"hh\:mm")</strong>
+                                @foreach (var slot in group.Value)
+                                {
+                   <div class="col-md-4">
+            <div class="card text-center mb-3 shadow-lg rounded-2 border-0">
+                <div class="card-body p-4">
+                    <h6 class="fw-bold">
+                                                 <i class="bi bi-clock me-1"></i>@(new DateTime(slot.StartTime.Ticks).ToString("hh:mm tt")) - 
+                                                    @(new DateTime(slot.EndTime.Ticks).ToString("hh:mm tt"))
                     </h6>
 
-                                                @* Handle status display properly *@
-                                                @if (slot.Status == SlotStatus.Available.ToString())
+                          <span class="badge rounded-pill d-inline-flex align-items-center
+    @(slot.Status == SlotStatus.Available.ToString() && DateTime.Now > slot.Date.Add(slot.StartTime) ? "bg-secondary" : 
+      slot.Status == SlotStatus.Available.ToString() ? "bg-success" : 
+      slot.Status == SlotStatus.Booked.ToString() ? "bg-warning" : 
+      slot.Status == SlotStatus.Completed.ToString() ? "bg-purple" : 
+      slot.Status == SlotStatus.Cancelled.ToString() ? "bg-danger" : "bg-secondary") 
+    px-2 py-1 fs-6 fw-normal">
+
+            <i class="me-1 fs-6
+        @(slot.Status == SlotStatus.Available.ToString() && DateTime.Now > slot.Date.Add(slot.StartTime) ? "bi bi-exclamation-circle-fill" :
+          slot.Status == SlotStatus.Available.ToString() ? "bi bi-check-circle-fill" : 
+          slot.Status == SlotStatus.Booked.ToString() ? "bi bi-calendar-check" : 
+          slot.Status == SlotStatus.Completed.ToString() ? "bi bi-check-circle" : 
+          slot.Status == SlotStatus.Cancelled.ToString() ? "bi bi-x-circle" : "bi bi-x-circle-fill")">
+            </i>
+                                                    @(slot.Status == SlotStatus.Available.ToString() && DateTime.Now > slot.Date.Add(slot.StartTime) ? "Not Booked" : slot.Status)
+        </span>
+
+
+                    <!-- Mark as Completed Button -->
+                                                @if (slot.Status == SlotStatus.Booked.ToString() && DateTime.Now > slot.Date.Add(slot.EndTime))
                                                 {
-                                                    @if (DateTime.Now > slot.Date.Add(slot.EndTime))
-                                                    {
-                                    <div class="mt-2 text-danger fw-bold">Not Booked</div>  @* Available but time passed *@
-                                                    }
-                                                    else
-                                                    {
-                                    <span class="badge bg-success">Available</span>  @* Normal Available status *@
-                                                    }
-                                                }
-                                                else if (slot.Status == SlotStatus.Booked.ToString())
-                                                {
-                            <span class="badge bg-warning text-dark">Booked</span>
-                                                }
-                                                else if (slot.Status == SlotStatus.Completed.ToString())
-                                                {
-                            <span class="badge bg-secondary">Completed</span>
-                                                }
-                                                else if (slot.Status == SlotStatus.Cancelled.ToString())
-                                                {
-                            <span class="badge bg-danger">Cancelled</span>
+                            <form method="post" asp-controller="Doctor" asp-action="MarkSlotAsCompleted">
+                                <input type="hidden" name="slotId" value="@slot.SlotId" />
+                                <button type="submit" class="btn btn-color mt-3">
+                                    <i class="bi bi-check-circle-fill"></i> Mark as Completed
+                                </button>
+                            </form>
                                                 }
                 </div>
             </div>
         </div>
 
-                                    }
+                                }
+
 
                                           
                                 </div>
@@ -149,6 +156,21 @@
                         <button type="submit" class="btn btn-danger">Apply Leave</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Patient Details Modal -->
+<div class="modal fade" id="patientDetailsModal" tabindex="-1" aria-labelledby="patientDetailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="patientDetailsModalLabel">Patient Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Patient Name:</strong> <span id="patientName"></span></p>
+                <p><strong>Gender:</strong> <span id="patientGender"></span></p>
             </div>
         </div>
     </div>

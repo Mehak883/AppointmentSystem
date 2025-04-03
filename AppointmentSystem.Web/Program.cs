@@ -7,6 +7,7 @@ using AppointmentSystem.Handlers.Login;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System.Reflection;
 using AppointmentSystem.Handlers.Admin.Handlers;
+using Microsoft.Net.Http.Headers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,10 +46,14 @@ builder.Services.AddSession(options =>
 });
 
 // Configure Serilog
+
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .WriteTo.Console()
-    .WriteTo.File("AppointmentSystem.Logs/app-log.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File(Path.Combine(builder.Environment.WebRootPath, "AppointmentSystem.Logs", "app-log.txt"),
+        rollingInterval: RollingInterval.Day, // Prevent daily logs
+      
+        shared: true)
     .CreateLogger();
 
 builder.Host.UseSerilog();
@@ -188,5 +193,12 @@ app.Use(async (context, next) =>
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Account}/{action=Login}/{id?}");
-
+app.UseResponseCaching();
+app.Use(async (context, next) =>
+{
+    context.Response.Headers[HeaderNames.CacheControl] = "no-store, no-cache, must-revalidate, max-age=0";
+    context.Response.Headers[HeaderNames.Pragma] = "no-cache";
+    context.Response.Headers[HeaderNames.Expires] = "-1";
+    await next();
+});
 app.Run();

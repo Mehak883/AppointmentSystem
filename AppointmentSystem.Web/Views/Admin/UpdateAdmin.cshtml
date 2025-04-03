@@ -5,7 +5,12 @@
 }
 
 <div class="container mt-4">
+      <div class="d-flex align-items-center gap-3 mb-3">
+    <a class="main-color" asp-controller="Admin" asp-action="ManageAdmins">
+        <i class="bi bi-box-arrow-left"></i> Back
+    </a>
     <h2 class="main-color">Update Admin</h2>
+    </div>
     <form asp-controller="Admin" asp-action="UpdateAdmin" method="post">
         <input type="hidden" asp-for="UserId" />
 

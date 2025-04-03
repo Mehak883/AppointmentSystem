@@ -8,13 +8,15 @@ using AppointmentSystem.Handlers.DoctorSlot.Command;
 using AppointmentSystem.Handlers.DoctorSlot.Query;
 using AppointmentSystem.Handlers.Patient.Query;
 using AppointmentSystem.Handlers.Specializations.Query;
-using AppointmentSystem.Models;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 
 namespace AppointmentSystem.Web.Controllers
 {
+    [Authorize(Roles = "Patient")]
+
     public class PatientController : Controller
     {
         private readonly IMediator _mediator;
@@ -102,7 +104,7 @@ namespace AppointmentSystem.Web.Controllers
             if (result)
             {
                 TempData["Success"] = "Slot booked successfully!";
-                return RedirectToAction("Appointments");
+                return RedirectToAction("Appointment");
             }
             else
             {

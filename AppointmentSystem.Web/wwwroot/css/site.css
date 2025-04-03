@@ -69,3 +69,30 @@ body {
 .svg-color {
     fill: #30505e !important;
 }
+.bg-purple{
+    background-color : mediumpurple;
+}
+.form-check-input {
+    width: 20px; /* Adjust size if needed */
+    height: 20px;
+    border: 2px solid #ccc; /* Default border color */
+    background-color: white;
+}
+
+    /* When Checkbox is Checked */
+    .form-check-input:checked {
+        background-color: #30505e !important; 
+        border-color: #d6f1ef !important;
+    }
+
+    .form-check-input:not(:checked) {
+        background-color: white !important;
+        border-color: #30505e !important;
+    }
+
+.icon-circle {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

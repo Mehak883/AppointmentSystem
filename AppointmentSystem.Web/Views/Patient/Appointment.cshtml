@@ -3,11 +3,15 @@
 @{
     ViewData["Title"] = "My Appointments";
 }
-
-<h2 class="mb-4">My Appointments</h2>
-
+<div class="container mt-5">
+        <div class="d-flex align-items-center gap-3 mb-3">
+    <a class="main-color" asp-controller="Patient" asp-action="Dashboard">
+        <i class="bi bi-box-arrow-left"></i> Back
+    </a>
+<h2 class="mb-4 main-color">My Appointments</h2>
+</div>
 <table class="table table-bordered table-striped">
-    <thead>
+    <thead class="main-bg-color text-white">
         <tr>
             <th>Doctor</th>
             <th>Specialization</th>
@@ -29,13 +33,13 @@
                     <td>@appointment.AppointDate.ToString("dd MMM yyyy")</td>
                     <td>
                         <span class="badge @(appointment.Status == SlotStatus.Booked ? "bg-warning text-dark" :
-                                        appointment.Status == SlotStatus.Completed ? "bg-secondary" :
+                                        appointment.Status == SlotStatus.Completed ? "bg-purple" :
                                         appointment.Status == SlotStatus.Cancelled ? "bg-danger" :
                                         "bg-success")">
                         @appointment.Status
                         </span>
                     </td>
-                        <td>
+                     
                   
                     <td>
                     @if (appointment.Status == SlotStatus.Booked && DateTime.Now < appointment.SlotDate.Add(appointment.StartTime))
@@ -54,3 +58,4 @@
         }
     </tbody>
 </table>
+</div>

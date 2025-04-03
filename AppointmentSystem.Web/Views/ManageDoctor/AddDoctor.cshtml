@@ -4,7 +4,13 @@
     ViewData["Title"] = "Add Doctor";
 }
 <div class="container mt-4">
+    <div class="d-flex align-items-center gap-3 mb-3">
+    <a class="main-color" asp-controller="ManageDoctor" asp-action="ViewAll">
+        <i class="bi bi-box-arrow-left"></i> Back
+    </a>
+
 <h2 class="main-color">Add Doctor</h2>
+</div>
    <form asp-controller="ManageDoctor" asp-action="AddDoctor" method="post">
         <div class="mb-3">
             <label asp-for="FullName"  class="form-label"></label>
@@ -47,18 +53,32 @@
          <span asp-validation-for="SlotDuration" class="text-danger"></span>
         </div>
 
-      <div class="mb-3">
-        <label>Specializations:</label>
-        <select asp-for="SpecializationIds" multiple required>
-            <option value="">Select</option>
+      @* <div class="mb-3"> *@
+      @*   <label>Specializations:</label> *@
+      @*   <select asp-for="SpecializationIds" multiple required> *@
+      @*       <option value="">Select</option> *@
+      @*           @foreach (var specialization in ViewBag.Specializations) *@
+      @*           { *@
+      @*                   <option value="@specialization.SpecializationId">@specialization.SpecializationName</option> *@
+      @*           } *@
+      @*   </select> *@
+      @*    <span asp-validation-for="SpecializationIds" class="text-danger"></span> *@
+         <div class="mb-3">
+    <label>Specializations:</label>
                 @foreach (var specialization in ViewBag.Specializations)
                 {
-                        <option value="@specialization.SpecializationId">@specialization.SpecializationName</option>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="SpecializationIds" value="@specialization.SpecializationId" 
+                       id="spec-@specialization.SpecializationId">
+                <label class="form-check-label" for="spec-@specialization.SpecializationId">
+                            @specialization.SpecializationName
+                </label>
+            </div>
                 }
-        </select>
-         <span asp-validation-for="SpecializationIds" class="text-danger"></span>
+    <span asp-validation-for="SpecializationIds" class="text-danger"></span>
+</div>
 
-    </div>
+    
         <button type="submit" class="btn-color btn">Register</button>
     </form>
 

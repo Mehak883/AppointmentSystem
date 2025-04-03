@@ -29,7 +29,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Appointment.Handlers\AppointmentSystem.Handlers.csproj" />
     <ProjectReference Include="..\AppointmentSystem.Data\AppointmentSystem.Data.csproj" />
-    <ProjectReference Include="..\AppointmentSystem.Logs\AppointmentSystem.Logs.csproj" />
     <ProjectReference Include="..\AppointmentSystem.Models\AppointmentSystem.Models.csproj" />
   </ItemGroup>
 
