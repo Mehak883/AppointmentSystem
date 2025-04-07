@@ -4,25 +4,25 @@ using AppointmentSystem.Dtos.Specialization;
 using AppointmentSystem.Handlers.Doctor.Query;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Serilog.Core;
+
 
 namespace AppointmentSystem.Handlers.Doctor.Handlers
 {
     class GetAllDoctorHandler:IRequestHandler<GetAllDoctorsQuery,List<DoctorResponseDto>>
     {
         private readonly AppointmentDbContext _context;
-
-        public GetAllDoctorHandler(AppointmentDbContext context)
+        private readonly ILogger<GetAllDoctorHandler> _logger;
+        public GetAllDoctorHandler(AppointmentDbContext context, ILogger<GetAllDoctorHandler> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task<List<DoctorResponseDto>> Handle(GetAllDoctorsQuery request, CancellationToken cancellationToken)
         {
+            _logger.LogInformation("Fetching all doctors...");
             return await _context.Doctors
                 .Include(d => d.User)
                 .Include(d => d.DoctorSpecializations)

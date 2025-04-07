@@ -16,8 +16,7 @@ namespace AppointmentSystem.Data
         public DbSet<DoctorSpecialization> DoctorSpecializations { get; set; }
         public DbSet<Slot> Slots { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
-        public DbSet<LeaveRequest> LeaveRequests { get; set; }
-        public DbSet<Notification> Notifications { get; set; }
+  
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

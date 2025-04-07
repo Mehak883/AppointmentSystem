@@ -10,11 +10,7 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
-               
-               
-                <li class="nav-item">
-                    <a class="nav-link nav-color" asp-controller="Doctor" asp-action="ApplyLeave">Apply Leave</a>
-                </li>
+        
             </ul>
 
        
@@ -38,7 +34,7 @@
                     <li><hr class="dropdown-divider"></li>
                     <li>
                         <a href="#" class="dropdown-item text-warning" data-bs-toggle="modal" data-bs-target="#forgotPasswordModal">
-                            <i class="bi bi-key-fill"></i> Forgot Password
+                            <i class="bi bi-key-fill"></i> Change Password
                         </a>
                     </li>
                     <li><hr class="dropdown-divider"></li>
@@ -54,7 +50,7 @@
 </nav>
 @{
     var totalSlides = Model.SlotsGroupedByDate.Count();
-    var startIndex = totalSlides > 1 ? totalSlides - 2 : 0; // Ensure there's at least one slide
+    var startIndex = totalSlides > 1 ? totalSlides - 2 : 0;
 }
 
 <div id="slotCarousel" class="carousel slide" data-bs-interval="false">
@@ -65,12 +61,11 @@
                     <div class="container">
                         <div class="card">
                             <div class="card-header text-center">
-                                <h5>@group.Value.Key.ToString("dddd, dd MMM yyyy")</h5> <!-- Date as slide title -->
+                                <h5>@group.Value.Key.ToString("dddd, dd MMM yyyy")</h5>
                             </div>
                             <div class="card-body">
                                 <div class="row">
-                                @* @foreach (var slot in group.Value) *@
-                                @* { *@
+                        
                                 @foreach (var slot in group.Value)
                                 {
                    <div class="col-md-4">
@@ -100,7 +95,7 @@
         </span>
 
 
-                    <!-- Mark as Completed Button -->
+               
                                                 @if (slot.Status == SlotStatus.Booked.ToString() && DateTime.Now > slot.Date.Add(slot.EndTime))
                                                 {
                             <form method="post" asp-controller="Doctor" asp-action="MarkSlotAsCompleted">
@@ -139,26 +134,7 @@
 
 
    
-    <!-- Apply Leave Modal -->
-    <div class="modal fade" id="applyLeaveModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Apply for Leave</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" asp-controller="DoctorDashboard" asp-action="ApplyLeave">
-                        <div class="mb-3">
-                            <label class="form-label">Leave Date</label>
-                            <input type="date" class="form-control" name="leaveDate" required />
-                        </div>
-                        <button type="submit" class="btn btn-danger">Apply Leave</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>
 <!-- Patient Details Modal -->
 <div class="modal fade" id="patientDetailsModal" tabindex="-1" aria-labelledby="patientDetailsModalLabel" aria-hidden="true">

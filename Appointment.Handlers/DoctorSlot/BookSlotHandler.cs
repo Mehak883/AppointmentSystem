@@ -22,25 +22,24 @@ namespace AppointmentSystem.Handlers.DoctorSlot
 
             if (slot == null)
             {
-                return false;  // Slot not found or already booked
+                return false;  
             }
 
             DateTime currentDateTime = DateTime.Now;
-            DateTime slotDateTime = slot.Date.Date + slot.StartTime; // Combine date and start time
+            DateTime slotDateTime = slot.Date.Date + slot.StartTime; 
 
-            // Ensure slot start time is in the future
+           
             if (slotDateTime <= currentDateTime)
             {
                 return false;
             }
 
-            // Check if the patient already has an appointment at the same time
             var patientAppointments = await _context.Appointments
-      .Where(a => a.PatientId == request.PatientId && a.AppointDate.Date == slot.Date.Date)
-      .Include(a => a.Slot) // Include Slot details
+      .Where(a => a.PatientId == request.PatientId && a.AppointDate.Date == slot.Date.Date && a.Status==SlotStatus.Booked)
+      .Include(a => a.Slot) 
       .ToListAsync(cancellationToken);
 
-            // Check if there's a time conflict
+           
             bool hasConflict = patientAppointments.Any(a => a.Slot != null &&
                 a.Slot.StartTime == slot.StartTime);
 

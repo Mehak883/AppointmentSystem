@@ -3,6 +3,7 @@ using AppointmentSystem.Dtos.Appointment;
 using AppointmentSystem.Handlers.Appointment.Query;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 
 namespace AppointmentSystem.Handlers.Appointment
@@ -10,15 +11,19 @@ namespace AppointmentSystem.Handlers.Appointment
         public class GetAppointmentsHandler : IRequestHandler<GetAppointmentsQuery, List<AppointmentResponseDto>>
         {
             private readonly AppointmentDbContext _context;
-
-            public GetAppointmentsHandler(AppointmentDbContext context)
+        private readonly ILogger<GetAppointmentsHandler> _logger;
+        public GetAppointmentsHandler(AppointmentDbContext context, ILogger<GetAppointmentsHandler> logger)
             {
                 _context = context;
+            _logger = logger;
             }
 
-            public async Task<List<AppointmentResponseDto>> Handle(GetAppointmentsQuery request, CancellationToken cancellationToken)
+        public async Task<List<AppointmentResponseDto>> Handle(GetAppointmentsQuery request, CancellationToken cancellationToken)
+        {
+            _logger.LogInformation("Fetching appointments for patient ID: {PatientId}", request.PatientId);
+            try
             {
-                return await _context.Appointments
+                var appointments = await _context.Appointments
                     .Include(a => a.Slot)
                         .ThenInclude(s => s.Doctor)
                     .Include(a => a.Specialization)
@@ -40,6 +45,13 @@ namespace AppointmentSystem.Handlers.Appointment
                     })
                     .OrderByDescending(a => a.AppointDate)
                     .ToListAsync(cancellationToken);
+                return appointments;
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "Error fetching appointments for patient ID: {PatientId}", request.PatientId);
+                return new List<AppointmentResponseDto>();
+            }
             }
         }
     }

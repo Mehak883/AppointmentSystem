@@ -4,26 +4,26 @@ using AppointmentSystem.Dtos.Specialization;
 using AppointmentSystem.Handlers.Doctor.Query;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
+using Serilog.Core;
+
 
 namespace AppointmentSystem.Handlers.Doctor.Handlers
 {
     class GetDoctorBySpecializationIdHandler:IRequestHandler<GetDoctorsBySpecializationIdQuery,List<DoctorResponseDto>>
     {
         private readonly AppointmentDbContext _context;
-
-        public GetDoctorBySpecializationIdHandler(AppointmentDbContext context)
+        private readonly ILogger<GetDoctorBySpecializationIdHandler> _logger;
+        public GetDoctorBySpecializationIdHandler(AppointmentDbContext context, ILogger<GetDoctorBySpecializationIdHandler> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         public async Task<List<DoctorResponseDto>> Handle(GetDoctorsBySpecializationIdQuery request, CancellationToken cancellationToken)
         {
-            return await _context.Doctors
+            _logger.LogInformation("Fetching doctors for SpecializationId: {SpecializationId}", request.SpecializationId);
+            var doctors= await _context.Doctors
                 .Include(d => d.User)
                 .Include(d => d.DoctorSpecializations)
                     .ThenInclude(ds => ds.Specialization)
@@ -38,6 +38,8 @@ namespace AppointmentSystem.Handlers.Doctor.Handlers
                     Specializations = d.DoctorSpecializations.Select(ds => new SpecializationResponseDto { SpecializationName = ds.Specialization.SpecializationName ,SpecializationId = ds.SpecializationId}).ToList()
                 })
                 .ToListAsync(cancellationToken);
+            _logger.LogInformation("Retrieved {Count} doctors for SpecializationId: {SpecializationId}", doctors.Count, request.SpecializationId);
+            return doctors;
         }
     }
 }

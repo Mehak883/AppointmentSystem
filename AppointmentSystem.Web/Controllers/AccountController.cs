@@ -118,6 +118,8 @@ namespace AppointmentSystem.Web.Controllers
         public async Task<IActionResult> ResetPassword(ChangePasswordRequestDto changePasswordRequestDto)
         {
             var userId = HttpContext.Session.GetString("UserId");
+            var role = HttpContext.Session.GetString("Role");
+
             if (string.IsNullOrEmpty(userId))
             {
                 return RedirectToAction("Login");
@@ -134,12 +136,15 @@ namespace AppointmentSystem.Web.Controllers
 
             if (success)
             {
-                HttpContext.Session.Clear(); // Log out the user
+                TempData["success"] = "password changed successfully";
+
+                HttpContext.Session.Clear(); 
                 return RedirectToAction("Login");
             }
+            TempData["error"] = "password reset failed";
 
-            ModelState.AddModelError("Error", "Password reset failed.");
-            return View("ResetPassword"); // Adjust based on your UI
+            return role == "SuperAdmin"|| role=="Admin"? RedirectToAction("Dashboard","Admin"):role=="Doctor"?RedirectToAction("Dashboard","Doctor"):RedirectToAction("Dashboard","Patient");
+
         }
 
 
