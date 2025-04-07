@@ -46,8 +46,6 @@ namespace AppointmentSystem.Handlers.Doctor.Handlers
                 }
             }
 
-            //_context.Doctors.Remove(doctor);
-            //await _context.SaveChangesAsync();
             return true;
         }
     }

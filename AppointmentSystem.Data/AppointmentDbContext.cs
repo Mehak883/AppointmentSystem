@@ -22,7 +22,7 @@ namespace AppointmentSystem.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // ✅ Many-to-Many Relationship: Doctor ↔ Specialization
+          
             modelBuilder.Entity<DoctorSpecialization>()
                 .HasKey(ds => new { ds.DoctorId, ds.SpecializationId });
 
@@ -38,31 +38,19 @@ namespace AppointmentSystem.Data
                 .HasForeignKey(ds => ds.SpecializationId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Ensure SpecializationName is unique
+          
             modelBuilder.Entity<Specialization>()
                 .HasIndex(s => s.SpecializationName)
                 .IsUnique();
         
-        // ✅ One-to-Many Relationship: Patient ↔ Appointments
-        //modelBuilder.Entity<Appointment>()
-        //    .HasOne(a => a.Patient)
-        //    .WithMany(p => p.Appointments)  // Ensure Patient has `ICollection<Appointment>`
-        //    .HasForeignKey(a => a.PatientId)
-        //    .OnDelete(DeleteBehavior.Restrict);
-
-        // ✅ One-to-Many Relationship: Slot ↔ Appointments
+     
         modelBuilder.Entity<Appointment>()
                 .HasOne(a => a.Slot)
-                .WithMany(s => s.Appointments)  // Ensure Slot has `ICollection<Appointment>`
+                .WithMany(s => s.Appointments)  
                 .HasForeignKey(a => a.SlotId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // ✅ One-to-Many Relationship: Doctor ↔ Slots
-            //modelBuilder.Entity<Slot>()
-            //    .HasOne(s => s.Doctor)
-            //    .WithMany(d => d.Slots)  // Ensure Doctor has `ICollection<Slot>`
-            //    .HasForeignKey(s => s.DoctorId)
-            //    .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

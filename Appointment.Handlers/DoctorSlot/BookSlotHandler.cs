@@ -45,10 +45,9 @@ namespace AppointmentSystem.Handlers.DoctorSlot
 
             if (hasConflict)
             {
-                return false; // Patient has another appointment at the same time
+                return false;
             }
 
-            // Proceed with booking
             var appointment = new Models.Appointment
             {
                 SlotId = request.SlotId,

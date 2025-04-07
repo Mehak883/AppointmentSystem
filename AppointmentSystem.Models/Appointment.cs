@@ -12,13 +12,13 @@ namespace AppointmentSystem.Models
         public int PatientId { get; set; }
 
         [ForeignKey("PatientId")]
-        public Patient? Patient { get; set; }   // ✅ Nullable to avoid EF Core errors
+        public Patient? Patient { get; set; }  
 
         [Required]
         public int SlotId { get; set; }
 
         [ForeignKey("SlotId")]
-        public Slot? Slot { get; set; }  // ✅ Nullable to avoid EF Core errors
+        public Slot? Slot { get; set; } 
 
         [Required]
         public int SpecializationId { get; set; }

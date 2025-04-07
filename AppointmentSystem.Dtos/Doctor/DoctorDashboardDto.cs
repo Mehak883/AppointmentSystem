@@ -13,7 +13,7 @@ namespace AppointmentSystem.Dtos.Doctor
             public string Email { get; set; }
             public string Role { get; set; }
         public List<SpecializationResponseDto> Specializations { get; set; } = new();
-        public List<IGrouping<DateTime, SlotResponseDto>> SlotsGroupedByDate { get; set; }  // Grouping by Date
+        public List<IGrouping<DateTime, SlotResponseDto>> SlotsGroupedByDate { get; set; }  
 
 
     }

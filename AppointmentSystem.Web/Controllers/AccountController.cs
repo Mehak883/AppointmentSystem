@@ -4,7 +4,6 @@ using AppointmentSystem.Models;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
-using AppointmentSystem.Dtos.Admin;
 using AppointmentSystem.Dtos.Identity;
 using AppointmentSystem.Handlers.Patient.Command;
 using AppointmentSystem.Dtos.Patient;
@@ -28,7 +27,6 @@ namespace AppointmentSystem.Web.Controllers
 
             if (!string.IsNullOrEmpty(userRole))
             {
-                // Redirect users to their respective dashboards
                 return RedirectToAction("RedirectToDashboard");
             }
 
@@ -66,7 +64,7 @@ namespace AppointmentSystem.Web.Controllers
             var command = new RegisterPatientRequest { Email = request.Email, FullName = request.FullName, Gender = request.Gender, Password = request.Password };
             var result = await _mediator.Send(command);
             if (result)
-                return RedirectToAction("Dashboard", "Patient"); // Redirect to patient dashboard
+                return RedirectToAction("Dashboard", "Patient"); 
 
             ModelState.AddModelError("", "Signup failed. Please try again.");
             return View(request);
@@ -110,7 +108,7 @@ namespace AppointmentSystem.Web.Controllers
         {
             await _signInManager.SignOutAsync();
             HttpContext.Session.Clear();
-            Response.Cookies.Delete(".AspNetCore.Identity.Application"); // Ensure session cookies are cleared
+            Response.Cookies.Delete(".AspNetCore.Identity.Application"); 
             return RedirectToAction("Login");
         }
         [Authorize]

@@ -34,7 +34,6 @@ namespace AppointmentSystem.Handlers.DoctorSlot
                 _context.Appointments.Update(appointment);
             }
 
-            // Save changes
             await _context.SaveChangesAsync(cancellationToken);
             return true;
         }

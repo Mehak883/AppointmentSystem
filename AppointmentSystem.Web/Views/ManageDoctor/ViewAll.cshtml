@@ -73,10 +73,10 @@
         const tableRows = document.querySelectorAll("#doctorsTable tr");
 
         filterDropdown.addEventListener("change", function () {
-            const selectedSpecialization = this.value; // Get selected ID
+            const selectedSpecialization = this.value; 
 
             tableRows.forEach(row => {
-                const specializations = row.dataset.specializations.split(","); // Get IDs as an array
+                const specializations = row.dataset.specializations.split(","); 
 
                 if (!selectedSpecialization || specializations.includes(selectedSpecialization)) {
                     row.style.display = "";

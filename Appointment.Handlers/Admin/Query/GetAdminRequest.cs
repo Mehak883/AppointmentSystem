@@ -1,5 +1,4 @@
 ﻿using MediatR;
-//using AppointmentSystem.Web.DTOs.Admin;
 using AppointmentSystem.Dtos.Admin;
 namespace AppointmentSystem.Handlers.Admin.Query
 {

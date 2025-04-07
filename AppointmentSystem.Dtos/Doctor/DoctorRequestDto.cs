@@ -18,11 +18,9 @@ namespace AppointmentSystem.Dtos.Doctor
         public required string ConfirmPassword { get; set; }
 
         [Required(ErrorMessage = "Shift start time is required")]
-        //[Range(typeof(TimeSpan), "00:00:00", "23:59:59", ErrorMessage = "Start time must be a valid time.")]
 
         public TimeSpan StartTime { get; set; }
         [Required(ErrorMessage = "Shift end time is required.")]
-        //[Range(typeof(TimeSpan), "00:00:00", "23:59:59", ErrorMessage = "End time must be a valid time.")]
         public TimeSpan EndTime { get; set; }
         [Required(ErrorMessage = "Slot duration is required.")]
         [Range(15, 60, ErrorMessage = "Slot duration must be between 15 and 60 minutes.")]
@@ -31,12 +29,5 @@ namespace AppointmentSystem.Dtos.Doctor
         [MinLength(1, ErrorMessage = "At least one specialization must be selected.")]
         public List<int> SpecializationIds { get; set; } = new();
 
-        //public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
-        //{
-        //    if (EndTime <= StartTime)
-        //    {
-        //        yield return new ValidationResult("End time must be greater than start time.", new[] { "EndTime" });
-        //    }
-        //}
     }
 }
